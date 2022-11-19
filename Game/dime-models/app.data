@@ -1,0 +1,95 @@
+Data _tH3fEMwMEeWZVvvwxpYu8A {
+  modelName "Data"
+  ConcreteType _dh6BYMwNEeWZVvvwxpYu8A at 90,60 size 111,55 {
+  	name "ConcreteUser"
+  	UserAttribute _fPY24MwNEeWZVvvwxpYu8A at 5,32 size 101,18 {
+  		oppositeAttribute _fOkXgMwNEeWZVvvwxpYu8A
+  		dataType _UdYs4MwNEeWZVvvwxpYu8A
+  		name "baseUser"
+  		isList false
+  	}
+  }
+  
+  UserType _UdYs4MwNEeWZVvvwxpYu8A at 74,190 size 143,145 {
+  	name "BaseUser"
+  	UserAttribute _fOkXgMwNEeWZVvvwxpYu8A at 5,32 size 133,18 {
+  		oppositeAttribute _fPY24MwNEeWZVvvwxpYu8A
+  		dataType _dh6BYMwNEeWZVvvwxpYu8A
+  		name "concreteUser"
+  		isList true
+  	}
+  	
+  	PrimitiveAttribute _YIIgUMwNEeWZVvvwxpYu8A at 5,104 size 133,18 {
+  		dataType Text
+  		name "password"
+  		isList false
+  	}
+  	
+  	PrimitiveAttribute _3QnzMM46EeWKGIrSDzlNog at 5,68 size 133,18 {
+  		dataType File
+  		name "image"
+  		isList false
+  	}
+  	
+  	PrimitiveAttribute _VE6ToM5BEeWKGIrSDzlNog at 5,50 size 133,18 {
+  		dataType Text
+  		name "firstName"
+  		isList false
+  	}
+  	
+  	PrimitiveAttribute _WYcYEM5BEeWKGIrSDzlNog at 5,86 size 133,18 {
+  		dataType Text
+  		name "lastName"
+  		isList false
+  	}
+  	
+  	PrimitiveAttribute _1aiCkG_QEeaqHezD6-M0AA at 5,122 size 133,18 {
+  		dataType Text
+  		name "username"
+  		isList false
+  	}
+  	-UserAssociation-> _dh6BYMwNEeWZVvvwxpYu8A  decorate "Text" at (4,-8) decorate "Text" at (12,-7) {
+  		id _fOZ_cMwNEeWZVvvwxpYu8A
+  		targetAttr _fOkXgMwNEeWZVvvwxpYu8A
+  		isHidden false
+  		sourceAttr _fPY24MwNEeWZVvvwxpYu8A
+  	}
+  }
+  
+  ConcreteType _gahvsWZbEe2X7s_wBoiCCg at 500,130 size 140,55 {
+  	name "Table"
+  	ComplexAttribute _yxhVIWZbEe2X7s_wBoiCCg at 5,32 size 130,18 {
+  		dataType _lWXXkWZbEe2X7s_wBoiCCg
+  		name "tableRow"
+  		isList true
+  	}
+  	-Association-> _lWXXkWZbEe2X7s_wBoiCCg  decorate "Text" at (0,0) decorate "" at (0,0) {
+  		id _yxgHAWZbEe2X7s_wBoiCCg
+  		isHidden false
+  		sourceAttr _yxhVIWZbEe2X7s_wBoiCCg
+  	}
+  }
+  
+  ConcreteType _lWXXkWZbEe2X7s_wBoiCCg at 499,250 size 140,55 {
+  	name "TableRow"
+  	ComplexAttribute _doTrkWdfEe24Pt3Q18CBnA at 5,32 size 130,18 {
+  		dataType _pPCSQWZbEe2X7s_wBoiCCg
+  		name "tableEntry"
+  		isList true
+  	}
+  	-Association-> _pPCSQWZbEe2X7s_wBoiCCg  decorate "Text" at (0,0) decorate "" at (0,0) {
+  		id _doQoQWdfEe24Pt3Q18CBnA
+  		isHidden false
+  		sourceAttr _doTrkWdfEe24Pt3Q18CBnA
+  	}
+  }
+  
+  ConcreteType _pPCSQWZbEe2X7s_wBoiCCg at 500,334 size 140,55 {
+  	name "TableEntry"
+  	PrimitiveAttribute _1rhoIWZbEe2X7s_wBoiCCg at 5,32 size 130,18 {
+  		dataType Text
+  		name "value"
+  		isList false
+  	}
+  }
+}

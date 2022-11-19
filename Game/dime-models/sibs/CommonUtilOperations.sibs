@@ -1,0 +1,50 @@
+package common
+
+javaType Long : java.lang.Long
+
+/*
+ * Creates a random UUID and returns it as String.
+ */
+sib RandomUUID : info.scce.dime.common.CommonNativeUtilsServiceLibrary#randomUUID
+	-> success
+		result: text
+    -> failure
+
+/*
+ * Lets a thread sleep for a given time parameter.
+ * Fails if the current thread could not sleep.
+ * 
+ * @param millis : The time for which the thread will sleep
+ */
+sib SleepForSomeTime: info.scce.dime.common.CommonNativeUtilsServiceLibrary#sleepForSomeTime
+    millis : integer
+    -> success
+    -> failure
+
+/**
+ * Sends a mail with the given parameters 'subject' and 'body'.
+ *
+ * Please make sure that you have a 'mail.properties' file in the classpath. It should contain:
+ * - mail.user
+ * - mail.passwd
+ * - mail.from - Envelope sender, i.e. technical sender.
+ * - mail.smtp.from - Default "from" header, i.e. logical.
+ * - mail.smtp.host
+ * - mail.smtp.port
+ * - mail.smtp.auth
+ * - mail.smtp.starttls.enable
+ *
+ * @param subject : The subject of the email that will be send.
+ * @param body : The body of the email that will be send.
+ */     
+sib SendMail: info.scce.dime.common.CommonNativeUserServiceLibrary#sendMail
+    senderName : text
+    senderEamil : text
+    recipientName : text
+    recipientEmail : text
+    subject : text
+    body : text
+    -> true
+    -> false
+    -> noresult
+ 

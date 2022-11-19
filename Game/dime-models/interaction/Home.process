@@ -1,0 +1,74 @@
+Process _LWgagF-SEeakMeYoloYxpg {
+  modelName "Home"
+  description "Home"
+  dataFlowView true
+  processType Basic
+  isStateful false
+  StartSIB _LYO40F-SEeakMeYoloYxpg at 50,50 size 100,65 {
+  	-ControlFlow-> _-xUtUGUQEea0lrrxwspd7g  decorate "Polyline" at (2,0) {
+  		id _OaoS0F-SEeakMeYoloYxpg
+  		concurrent true
+  	}
+  }
+  
+  GUISIB _-xUtUGUQEea0lrrxwspd7g at 50,150 size 100,65 {
+  	cacheGUI false
+  	majorPage true
+  	libraryComponentUID "_LmrS0Ej8EeaK4_MRcoLfnw"
+  	name "PublicHome"
+  	label "PublicHome"
+  	ignoredBranch [  ]
+  	-BranchConnector-> _-4FbIWZXEe2X7s_wBoiCCg   {
+  		id _-4GpQWZXEe2X7s_wBoiCCg
+  		concurrent true
+  	}
+  	
+  	-BranchConnector-> _-4HQUWZXEe2X7s_wBoiCCg   {
+  		id _-4H3YWZXEe2X7s_wBoiCCg
+  		concurrent true
+  	}
+  }
+  
+  Branch _-4FbIWZXEe2X7s_wBoiCCg at 200,170 size 120,25 {
+  	name "Embedded"
+  	-ControlFlow-> _av1lIWZYEe2X7s_wBoiCCg  decorate "" at (0,0) {
+  		id _cw3owWZYEe2X7s_wBoiCCg
+  		concurrent true
+  	}
+  }
+  
+  Branch _-4HQUWZXEe2X7s_wBoiCCg at 51,250 size 120,25 {
+  	name "Dime"
+  	-ControlFlow-> _pJ4M0WZYEe2X7s_wBoiCCg  decorate "" at (0,0) {
+  		id _pedVsWZYEe2X7s_wBoiCCg
+  		concurrent true
+  	}
+  }
+  
+  GUISIB _av1lIWZYEe2X7s_wBoiCCg at 380,150 size 120,65 {
+  	cacheGUI false
+  	majorPage true
+  	libraryComponentUID "_ERWl4WZYEe2X7s_wBoiCCg"
+  	name "DimeEmbedded"
+  	label "DimeEmbedded"
+  	ignoredBranch [  ]
+  }
+  
+  ProcessSIB _pJ4M0WZYEe2X7s_wBoiCCg at 100,340 size 120,65 {
+  	libraryComponentUID "_j3BMEWZYEe2X7s_wBoiCCg"
+  	label "Game"
+  	ignoredBranch [  ]
+  	-BranchConnector-> _pJ9FUWZYEe2X7s_wBoiCCg   {
+  		id _pJ-TcWZYEe2X7s_wBoiCCg
+  		concurrent true
+  	}
+  }
+  
+  Branch _pJ9FUWZYEe2X7s_wBoiCCg at 190,260 size 120,25 {
+  	name "Back"
+  	-ControlFlow-> _-xUtUGUQEea0lrrxwspd7g  decorate "" at (0,0) {
+  		id _sOLrUWZYEe2X7s_wBoiCCg
+  		concurrent true
+  	}
+  }
+}

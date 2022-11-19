@@ -1,0 +1,78 @@
+package common
+
+javaType Object : java.lang.Object
+
+
+/**
+ * Writes an error message, i.e. at the error level of the logger.
+ * 
+ * @param message : This message will be printed.
+ */    
+sib LogErrorMessage : info.scce.dime.common.CommonNativeDebugService#logErrorMessage
+    message : text
+    -> success
+
+/**
+ * Writes an warn message, i.e. at the warn level of the logger.
+ *
+ * @param message : This message will be printed.
+ */ 
+sib logWarnMessage : info.scce.dime.common.CommonNativeDebugService#logWarnMessage
+    message: text
+    -> success
+
+/**
+ * Writes an info message, i.e. at the ifno level of the logger.
+ *
+ * @param message : This message will be printed.
+ */ 
+sib LogInfoMessage : info.scce.dime.common.CommonNativeDebugService#logInfoMessage
+    message: text
+    -> success
+   
+/**
+ * Writes an debug message, i.e. at the debug level of the logger.
+ *
+ * @param message : This message will be printed.
+ */ 
+sib LogDebugMessage : info.scce.dime.common.CommonNativeDebugService#logDebugMessage
+    message: text
+    -> success
+
+/**
+ * Put a string to the logging context (Mapped Diagnostic Context).
+ * The conextName must not be null.
+ * 
+ * @param contextName The key where the object should be put.
+ * @param value The value that should be put to the context.
+ */ 
+sib AddStringToLoggingContext : info.scce.dime.common.CommonNativeDebugService#putToContext
+    contextName : text
+    value : text
+    -> success
+    -> failure
+
+/**
+ * Put an object to the logging context (Mapped Diagnostic Context).
+ * The conextName must not be null.
+ * 
+ * @param contextName The key where the object should be put.
+ * @param value The value that should be put to the context.
+ */   
+sib AddObjectToLoggingContext : info.scce.dime.common.CommonNativeDebugService#putToContext
+    contextName : text
+    value : Object
+    -> success
+    -> failure
+
+/**
+ * Clear the Mapped Diagnostic Context.
+ * The conextName must not be null.
+ * 
+ * @param contextName The key where the object should be put.
+ * @param value The value that should be put to the context.
+ */ 
+sib ClearLoggingContext : info.scce.dime.common.CommonNativeDebugService#clearContext
+    contextName : text
+    -> success
+    -> failure

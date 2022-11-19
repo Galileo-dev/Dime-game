@@ -1,0 +1,14 @@
+package common
+
+
+/**
+ * Uploads a project resource
+ *
+ * @param path : Path of the project resource
+ * @return : Returns the file 'id' if the upload was successful
+ */    
+sib UploadProjectResource : info.scce.dime.common.CommonNativeFileServiceLibrary#uploadProjectResource
+    path : text
+    -> success
+        id : file
+    -> failure

@@ -1,0 +1,71 @@
+GUI _oKdnAWf0Ee2cveXnmwOj_g {
+  fullWidth false
+  disableAutoLayout false
+  additionalJavaScript [  ]
+  additionalStylesheets [  ]
+  title "GameView"
+  DataContext _oKfcMWf0Ee2cveXnmwOj_g at 10,10 size 180,145 {
+  	dfViewWorkaround true
+  	PrimitiveVariable _R4HJ0Wf1Ee2cveXnmwOj_g at 30,50 size 140,25 {
+  		dataType Text
+  		isInput true
+  		name "variable"
+  		dfViewWorkaround true
+  		isList false
+  	}
+  	
+  	ComplexVariable _UGRDcWf1Ee2cveXnmwOj_g at 10,90 size 160,25 {
+  		expanded false
+  		isLive false
+  		libraryComponentUID "_gahvsWZbEe2X7s_wBoiCCg"
+  		isInput true
+  		name "table"
+  		dfViewWorkaround true
+  		isList true
+  	}
+  }
+  
+  Template _oKgDQWf0Ee2cveXnmwOj_g at 240,10 size 150,190 {
+  	blockName ""
+  	disableAutoLayout false
+  	generalStyle GeneralStyling _oKgqUGf0Ee2cveXnmwOj_g {
+  			tallness Fitting
+  			marginBottom None
+  			attributes [  ]
+  			marginTop None
+  		}
+  	Row _oKhRYWf0Ee2cveXnmwOj_g at 10,30 size 130,130 {
+  		generalStyle GeneralStyling _oKk7wmf0Ee2cveXnmwOj_g {
+  				tallness Fitting
+  				marginBottom None
+  				attributes [  ]
+  				marginTop None
+  			}
+  		MoveUp _oKh4cWf0Ee2cveXnmwOj_g at 2,2 size 14,7 {
+  		}
+  		
+  		MoveDown _oKh4c2f0Ee2cveXnmwOj_g at 2,10 size 14,7 {
+  		}
+  		
+  		Col _oKjGkWf0Ee2cveXnmwOj_g at 10,30 size 100,80 {
+  			wideness Full
+  			layout Layout _oKk7wWf0Ee2cveXnmwOj_g {
+  					size Default
+  					offset None
+  					alignment Left
+  				}
+  			generalStyle GeneralStyling _oKk7wGf0Ee2cveXnmwOj_g {
+  					tallness Fitting
+  					marginBottom None
+  					attributes [  ]
+  					marginTop None
+  				}
+  			MoveLeft _oKjGk2f0Ee2cveXnmwOj_g at 2,2 size 7,14 {
+  			}
+  			
+  			MoveRight _oKjtoWf0Ee2cveXnmwOj_g at 10,2 size 7,14 {
+  			}
+  		}
+  	}
+  }
+}

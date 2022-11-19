@@ -1,0 +1,41 @@
+package common
+
+javaType Object : java.lang.Object
+
+
+/**
+ * Checks if a object is null.
+ * 
+ * @param a : A object that will be checked.
+ * @return : Returns true if a is null; false otherwise.
+ */    
+sib ObjectIsNull : info.scce.dime.common.CommonNativeObjectServiceLibrary#isNull
+    a : text
+    -> true
+    -> false
+
+/**
+ * Checks if two objects are equal.
+ *
+ * @param a : The object a is checked for equality with b.
+ * @param b : The object b is checked for equality with a.
+ * @return : Returns true if the object a is equal with b; false otherwise. 
+ */
+sib ObjectEquals : info.scce.dime.common.CommonNativeObjectServiceLibrary#objectEquals
+    a: Object
+    b: Object
+    -> true
+    -> false
+
+/**
+ * Converts an Object to a text.
+ *
+ * @param a : An Object that will be converted into a text
+ * @return : Returns the converted Object as a text; noresult if the object is null.
+ */    
+sib ConvertObjectToText: info.scce.dime.common.CommonNativeObjectServiceLibrary#convertToText
+    a: Object
+    -> success
+        result: text
+    -> noresult
+

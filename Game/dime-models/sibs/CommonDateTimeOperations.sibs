@@ -1,0 +1,21 @@
+package common
+
+
+/**
+ * Returns the date as.
+ *
+ * @return : Returns the current date.
+ */ 
+sib CurrentDate : info.scce.dime.common.CommonNativeDateTimeServiceLibrary#getCurrentDate
+    -> success
+        result : timestamp
+
+/**
+ * Returns the current date as string.
+ *
+ * @return : Returns the current date as a string.
+ */ 
+sib CurrentDateAsString : info.scce.dime.common.CommonNativeDateTimeServiceLibrary#getCurrentDateAsString
+    -> success
+        result : text
+    -> failure

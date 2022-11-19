@@ -1,0 +1,43 @@
+package common
+
+/**
+ * Perform a login action.
+ *
+ * @param username : The name of the user.
+ * @param password : The password of the user.
+ * @return : true if the user was logged in; false otherwise.
+ */
+sib Login : info.scce.dime.common.CommonNativeUserServiceLibrary#authenticateUser
+    username : text
+    password : text
+    -> true
+    -> false
+
+/** 
+ * Check if the current user is authenticated or not.
+ *
+ * @return : true, if the user is authenticated; false otherwise.
+ */
+sib IsUserAuthenticated : info.scce.dime.common.CommonNativeUserServiceLibrary#isUserAuthenticated
+    -> true
+    -> false
+
+/**
+ * Logout a user.
+ *
+ * @return success: The user was logged out; failure otherwise.
+ */    
+sib  Logout : info.scce.dime.common.CommonNativeUserServiceLibrary#logout
+    -> success
+    -> failure
+
+/**
+ * Hashes the given text using the SHA 512 algorithm in conjunction with a randomly generated salt.
+ * 
+ * @param password : the password to hash
+ * @return : The hashed password in the form of <hashedPassword>:<salt>, both base64 encoded.
+ */
+sib HashPassword : info.scce.dime.common.CommonNativeUserServiceLibrary#createSaltedSHA512Hash
+    password : text
+    -> success
+        hashedPassword : text

@@ -1,0 +1,12 @@
+package common
+
+/**
+ * Returns the boolean value of the given parameter 'value'.
+ * 
+ * @param value : A boolean value that will be used to switch.
+ * @return : Returns true if the value is true; false otherwise.
+ */    
+sib BooleanSwitch : info.scce.dime.common.CommonNativeBoolServiceLibrary#booleanSwitch
+    value : boolean
+    -> true
+    -> false  

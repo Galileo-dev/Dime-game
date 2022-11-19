@@ -1,0 +1,251 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>info.scce.dime</groupId>
+	<artifactId>wildfly-starter</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>${project.artifactId}</name>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<profiles>
+
+		<profile>
+			<id>dime_backend_mgmt_port default value</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+				<property>
+					<name>!env.DIME_BACKEND_MGMT_PORT</name>
+				</property>
+			</activation>
+			<properties>
+				<env.DIME_BACKEND_MGMT_PORT>9990</env.DIME_BACKEND_MGMT_PORT>
+			</properties>
+		</profile>
+
+		<profile>
+			<id>dime_backend_port_offset default value</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+				<property>
+					<name>!env.DIME_BACKEND_PORT_OFFSET</name>
+				</property>
+			</activation>
+			<properties>
+				<env.DIME_BACKEND_PORT_OFFSET>0</env.DIME_BACKEND_PORT_OFFSET>
+			</properties>
+		</profile>
+
+		<profile>
+			<id>dime_frontend_port default value</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+				<property>
+					<name>!env.DIME_FRONTEND_PORT</name>
+				</property>
+			</activation>
+			<properties>
+				<env.DIME_FRONTEND_PORT>9090</env.DIME_FRONTEND_PORT>
+			</properties>
+		</profile>
+
+		<profile>
+			<id>clean</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>1.1</version>
+						<executions>							
+							<execution>
+								<id>clean</id>
+								<phase>clean</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
+								<configuration>
+									<tasks>
+										<echo>Removing old app</echo>
+										<delete>
+    											<fileset dir="${wildfly.path}/standalone/deployments/" includes="app-${project.version}.*"/>
+  										</delete>
+  										<echo>Removing old app-dywa-bridge</echo>
+										<delete>
+    											<fileset dir="${wildfly.path}/standalone/deployments/" includes="app-dywa-bridge-${project.version}.*"/>
+  										</delete>
+										<echo>Removing old dywa</echo>
+										<delete>
+    											<fileset dir="${wildfly.path}/standalone/deployments/" includes="dywa.*"/>
+  										</delete>
+										<echo>Removing old files</echo>
+										<delete>
+											<fileset dir="${wildfly.path}/standalone/data/files" includes="*"/>
+										</delete>
+									</tasks>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>embedded</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>1.1</version>
+						<executions>
+							<execution>
+								<id>copy-standalone</id>
+								<phase>initialize</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
+								<configuration>
+									<tasks>
+										<echo>Copying (embedded) Wildfly Config</echo>
+										<copy file="../standalone-embedded.xml"
+											  tofile="${wildfly.path}/standalone/configuration/standalone.xml"
+											  overwrite="true"/>
+									</tasks>
+								</configuration>
+							</execution>
+							<execution>
+								<id>clean-embedded</id>
+								<phase>clean</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
+								<configuration>
+									<tasks>
+										<echo>Removing old database</echo>
+										<delete>
+											<fileset dir="${wildfly.path}/standalone/data" includes="dywa.*.db"/>
+										</delete>
+									</tasks>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>startwildfly</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.wildfly.plugins</groupId>
+						<artifactId>wildfly-maven-plugin</artifactId>
+						<version>2.0.1.Final</version>
+						<configuration>
+							<jboss-home>${wildfly.path}</jboss-home>
+							<port>${env.DIME_BACKEND_MGMT_PORT}</port>
+                    		<java-opts>
+                        		<java-opt>-Xms1g</java-opt>
+                        		<java-opt>-Xmx10g</java-opt>
+                        		<java-opt>-XX:MetaspaceSize=1g</java-opt>
+                        		<java-opt>-XX:MaxMetaspaceSize=2g</java-opt>
+                        		<java-opt>-Djava.net.preferIPv4Stack=true</java-opt>
+                        		<java-opt>-Djboss.socket.binding.port-offset=${env.DIME_BACKEND_PORT_OFFSET}</java-opt>
+                        		<java-opt>-Ddime.frontend.port=${env.DIME_FRONTEND_PORT}</java-opt>
+                    		</java-opts>
+						</configuration>
+						<executions>
+							<execution>
+								<phase>install</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		
+		<profile>
+			<id>stopwildfly</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.wildfly.plugins</groupId>
+						<artifactId>wildfly-maven-plugin</artifactId>
+						<version>2.0.1.Final</version>
+						<configuration>
+							<jboss-home>${wildfly.path}</jboss-home>
+							<port>${env.DIME_BACKEND_MGMT_PORT}</port>
+						</configuration>
+						<executions>
+							<execution>
+								<phase>install</phase>
+								<goals>
+									<goal>shutdown</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>deploy</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-dependency-plugin</artifactId>
+						<version>2.4</version>
+						<executions>
+							<execution>
+								<phase>initialize</phase>
+								<goals>
+									<goal>copy</goal>
+								</goals>
+								<configuration>
+									<artifactItems>
+										<artifactItem>
+											<groupId>de.ls5.dywa</groupId>
+											<artifactId>app</artifactId>
+											<version>0.9-SNAPSHOT</version>
+											<type>ear</type>
+											<overWrite>true</overWrite>
+											<outputDirectory>${wildfly.path}/standalone/deployments</outputDirectory>
+											<destFileName>dywa.ear</destFileName>
+										</artifactItem>
+									</artifactItems>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+        <repositories>
+                <repository>
+                        <id>maven-public</id>
+                        <name>LS5 Public Repository</name>
+                        <url>https://ls5svn.cs.tu-dortmund.de/maven-public/</url>
+                        <layout>default</layout>
+                        <snapshots>
+                                <enabled>true</enabled>
+                        </snapshots>
+                </repository>
+		<repository>
+			<id>ls5-public-snapshot</id>
+			<name>LS5 Public Snapshot Repository</name>
+			<url>https://ls5download.cs.tu-dortmund.de/repository/cinco-meta-snapshot</url>
+		</repository>
+        </repositories>
+</project>

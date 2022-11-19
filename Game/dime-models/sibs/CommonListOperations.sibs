@@ -1,0 +1,241 @@
+package common
+
+javaType Object : java.lang.Object
+
+/**
+ * Swap two list entries.
+ *
+ * @param index1 The index of the first entry (starts at 0).
+ * @param index2 The index of the second entry (starts at 0).
+ * @return The changed list.
+ */
+sib Swap: info.scce.dime.common.CommonNativeListServiceLibrary#swap
+    list: Object
+    index1: integer
+    index2: integer
+    -> success
+       list: Object
+    -> noresult
+
+/**
+ * Get the index of an element in the list.
+ *
+ * @param object The object which index should be found.
+ * @param list The list to look in.
+ * @param add An additional offset.
+ * @return The position of the element (starting by 0, -1 if not found) + add.
+ */
+sib IndexOf: info.scce.dime.common.CommonNativeListServiceLibrary#indexOf
+    object: Object
+    list: Object
+    add: integer
+    -> success
+       index: integer
+    -> noresult
+
+/**
+ * Get a sublist out of a bigger list.
+ *
+ * @param list The original list.
+ * @param from The first index to include in the sublist (starts at 0, inclusive).
+ * @param to The index after the sublist (exclusive).
+ * @return The new sublist or empty list.
+ */
+sib SubList: info.scce.dime.common.CommonNativeListServiceLibrary#sublist
+    list: Object
+    from: integer
+    to: integer
+    -> success
+       list: Object
+    -> noresult
+
+/**
+ * Get the first n elements of a list.
+ *
+ * @param list The index to get the elements out of.
+ * @param to The amount of elements to select.
+ * @return The new sublist.
+ */ 
+sib FirstElements: info.scce.dime.common.CommonNativeListServiceLibrary#firstElements
+    list: Object
+    to: integer
+    -> success
+       list: Object
+    -> noresult
+
+/**
+ * Move an object in the list one place to the back.
+ *
+ * @param object The object to be moved.
+ * @param list The list to move the object in.
+ * @return The changed list.
+ */
+sib Forwards: info.scce.dime.common.CommonNativeListServiceLibrary#forwards
+    object: Object
+    list: Object
+    -> success
+       list: Object
+    -> noresult
+
+/**
+ * Move an object in the list one place to the front.
+ *
+ * @param object The object to be moved.
+ * @param list The list to move the object in.
+ * @return The changed list.
+ */
+sib Backwards: info.scce.dime.common.CommonNativeListServiceLibrary#backwards
+    object: Object
+    list: Object
+    -> success
+       list: Object
+    -> noresult
+
+/**
+ * Insert an object at the begging of a list.
+ *
+ * @param object The object to be added.
+ * @param list The list to add the object to.
+ * @return The changed list.
+ */
+sib AddAsFirst: info.scce.dime.common.CommonNativeListServiceLibrary#addAsFirst
+    object: Object
+    list: Object
+    -> success
+       list: Object
+    -> noresult
+
+/**
+ * Insert an object at the end of a list.
+ *
+ * @param object The object to be added.
+ * @param list The list to add the object to.
+ * @return The changed list.
+ */
+sib AddAsLast: info.scce.dime.common.CommonNativeListServiceLibrary#addAsLast
+    object: Object
+    list: Object
+    -> success
+       list: Object
+    -> noresult
+
+/**
+ * Check if a list is empty or not.
+ * 
+ * @param list The list to check.
+ * @return true, if the list is empty.
+ */
+sib IsEmpty: info.scce.dime.common.CommonNativeListServiceLibrary#isEmpty
+    list: Object
+    -> true
+    -> false
+    -> noresult
+
+/**
+ * Check if an object is in a list.
+ *
+ * @param object The object to search for.
+ * @param list The list to check in.
+ * @return true, if the object is in the list.
+ */
+sib IsInList: info.scce.dime.common.CommonNativeListServiceLibrary#isInList
+    index: integer
+    list: Object
+    -> true
+    -> false
+    -> noresult
+
+/**
+ * Get the object, which is after an object in a list.
+ *
+ * @param object The reference object.
+ * @param list The list to check in.
+ * @return The object after the reference object in the list.
+ */
+sib GetNext: info.scce.dime.common.CommonNativeListServiceLibrary#getNext
+    object: Object
+    list: Object
+    -> success
+       next: Object
+    -> noresult
+ 
+/**
+ * Get the object, which is before an object in a list.
+ *
+ * @param object The reference object.
+ * @param list The list to check in.
+ * @return The object before the reference object in the list.
+ */
+sib GetPrevious: info.scce.dime.common.CommonNativeListServiceLibrary#getPrevious
+    object: Object
+    list: Object
+    -> success
+       previous: Object
+    -> noresult
+
+/**
+ * Remove an object from a list.
+ *
+ * @param object The object to be remove.
+ * @param list The list to remove the object out off.
+ * @return The changed list.
+ */ 
+sib Remove: info.scce.dime.common.CommonNativeListServiceLibrary#remove
+    object: Object
+    list: Object
+    -> success
+       list: Object
+    -> noresult
+
+/**
+ * Remove an element by index from a list.
+ *
+ * @param index The index to be removed.
+ * @param list The list to remove the element out off.
+ * @return The changed list.
+ */
+sib RemoveByIndex: info.scce.dime.common.CommonNativeListServiceLibrary#removeByIndex
+    index: integer
+    list: Object
+    -> success
+       list: Object
+    -> noresult
+
+/**
+ * Concatenate two list.
+ *
+ * @param list1 The first list.
+ * @param list2 The second list.
+ * @return list1, which now also has the elements of list2.
+ */
+sib AddAll: info.scce.dime.common.CommonNativeListServiceLibrary#addAll
+    list1: Object
+    list2: Object
+    -> success
+       list1: Object
+    -> noresult
+
+/**
+ * Reverse the order of a list.
+ *
+ * @param list1 The list to reverse the elements of.
+ * @return The changed list.
+ */
+sib Reverse: info.scce.dime.common.CommonNativeListServiceLibrary#reverse
+    list: Object
+    -> success
+       list: Object
+    -> noresult
+
+/**
+ * Insert an object at a random position into the list.
+ *
+ * @param list The list to add the object to.
+ * @param element The object to be added.
+ * @return The changed list.
+ */
+sib InsertAnywhere: info.scce.dime.common.CommonNativeListServiceLibrary#insertAnywhere
+    list: Object
+    element: Object
+    -> success
+       list: Object

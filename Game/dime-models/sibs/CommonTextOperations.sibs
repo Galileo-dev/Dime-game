@@ -1,0 +1,119 @@
+package common
+
+javaType Object : java.lang.Object
+
+
+/**
+ * Compares two strings, whether they are equal.
+ * 
+ * @param a : A string, which will compared with another string b.
+ * @param b : A string, which will compared with String a.
+ * @return : Returns true if the string are equal; false otherwise.
+ */
+sib TextEquals : info.scce.dime.common.CommonNativeTextServiceLibrary#equals
+    a : text
+    b : text
+    -> true
+    -> false
+
+/**
+ * Appending to string a another string b.
+ * 
+ * @param a : The first string to which another string b will be appended.
+ * @param b : The String which will be appended to previously string.
+ * @return : Returns the appended string.
+ */
+sib TextAppend : info.scce.dime.common.CommonNativeTextServiceLibrary#append
+    a : text
+    b : text
+    -> success
+        result: text
+
+/**
+ * Joining Strings.
+ * 
+ * @param prefix : The first part of the string to join.
+ * @param infix    : The second part of the string to join.
+ * @param suffix : The third part of the string to join.
+ * @return : Returns the joined string prefix + infix + suffix.
+ */
+sib TextJoin : info.scce.dime.common.CommonNativeTextServiceLibrary#join
+    prefix : text
+    suffix : text
+    infix : text
+    -> success
+        result : text
+
+/**
+ * Checks if a string is null.
+ * 
+ * @param a : A string that will be checked.
+ * @return : Returns true if a is null; false otherwise.
+ */    
+sib TextIsNull : info.scce.dime.common.CommonNativeTextServiceLibrary#isNull
+    a : text
+    -> true
+    -> false
+
+/**
+ * Determine the length of a string.
+ * 
+ * @param a : A string that will be measured.
+ * @return : Returns the length of a string.
+ */
+sib TextLength : info.scce.dime.common.CommonNativeTextServiceLibrary#length
+    a : text
+    -> success
+        length : integer
+
+/**
+ * Convert a string into lowercase.
+ * 
+ * @param a : The string that will be converted into lowercase.
+ * @return : Returns the converted string.
+ */    
+sib TextToLowercase : info.scce.dime.common.CommonNativeTextServiceLibrary#toLowercase
+    a : text
+    -> success
+        result : text
+
+/** 
+ * Checks if a given string 'string' contains another string 'needle'.
+ * 
+ * @param string : The string that will be checked.
+ * @param needle : A string that is maybe a part of the given 'string'.
+ * @return : Returns true if 'string' contains 'needle'; false otherwise.
+ */    
+sib TextContains : info.scce.dime.common.CommonNativeTextServiceLibrary#contains
+    string : text
+    needle : text
+    -> true
+    -> false
+
+/**
+ * Splits a given string 't' by a 'splitter'.
+ * Fails if the splitter is to is not a valid expression.
+ *
+ * @param t : The text that will be splitted.
+ * @param splitter : This parameter splits a given string.
+ * @return : Returns a list of string after the splitting
+ */    
+sib TextSplit : info.scce.dime.common.CommonNativeServices#split
+    t : text
+    splitter : text
+    -> success
+        segments : [text]
+    -> failure
+
+/**
+ * Shorten a text.
+ * 
+ * @param a : The text to shorten.
+ * @param b : The maximum length of the resulting string.
+ * @result : The beginning of the original text, shortened to the specified length. 
+ */
+sib TextShorten : info.scce.dime.common.CommonNativeServices#shorten
+    a : text
+    b : integer
+    -> success
+       result : text

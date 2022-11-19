@@ -1,0 +1,168 @@
+package common
+
+javaType Long : java.lang.Long
+
+
+/**
+ * Adds two integers a and b.
+ * Fails if the addition causes an integer overflow.
+ *
+ * @param a : The first argument of the addition.
+ * @param b : The second argument of the addition.
+ * @return : Returns the result of the addition.
+ */
+sib IntegerAdd : info.scce.dime.common.CommonNativeIntegerServiceLibrary#add
+    a: integer
+    b: integer
+    -> success 
+        result : integer
+    -> failure
+
+/**
+ * Subtracts two integers a and b.
+ * Fails if the subtraction causes an integer overflow.
+ *
+ * @param a : The first argument of the subtraction.
+ * @param b : The second argument of the subtraction.
+ * @return : Returns the result of the subtraction.
+ */
+sib IntegerSub : info.scce.dime.common.CommonNativeIntegerServiceLibrary#subtract
+    a: integer
+    b: integer
+    -> success 
+        result : integer
+    -> failure
+
+/**
+ * Multiplies two integers a and b.
+ * Fails if the multiplication causes an integer overflow.
+ *
+ * @param a : The first argument of the multiplication.
+ * @param b : The second argument of the multiplication.
+ * @return : Returns the result of the multiplication.
+ */
+sib IntegerMutliply : info.scce.dime.common.CommonNativeIntegerServiceLibrary#multiply
+    a: integer
+    b: integer
+    -> success 
+        result : integer
+    -> failure
+
+/**
+ * Divides two integers a and b and returns the quotient.
+ * Fails if the divisor is 0.
+ *
+ * @param a : The first argument of the division.
+ * @param b : The second argument of the division.
+ * @return : Returns the quotient of the division.
+ */
+sib IntegerDivide : info.scce.dime.common.CommonNativeIntegerServiceLibrary#divide
+    a: integer
+    b: integer
+    -> success 
+        result : integer
+    -> failure
+
+/**
+ * Divides two integers a and b and returns the remainder
+ * Fails if the divisor is 0.
+ *
+ * @param a : The first argument of the division.
+ * @param b : The second argument of the division.
+ * @return : Returns the remainder of the division.
+ */
+sib IntegerMod : info.scce.dime.common.CommonNativeIntegerServiceLibrary#mod
+    a: integer
+    b: integer
+    -> success 
+        result : integer
+    -> failure
+
+
+/**
+ * Compares two integers a and b and returns true if a is less than b.
+ *
+ * @param a : An integer value that will be compared to another parameter b.
+ * @param b : An integer value that will be compared to another parameter a.
+ * @return : Returns true if a is less than b and false if not.
+ */
+sib IntegerLess : info.scce.dime.common.CommonNativeIntegerServiceLibrary#less
+    a: integer
+    b: integer
+    -> true
+    -> false
+
+/**
+ * Compares two integers a and b and returns true if a is less than or equal to b.
+ *
+ * @param a : An integer value that will be compared to another parameter b.
+ * @param b : An integer value that will be compared to another parameter a.
+ * @return : Returns true if a is less than or equal to b and false if not. 
+ */
+sib IntegerLessOrEqual : info.scce.dime.common.CommonNativeIntegerServiceLibrary#lessOrEquals
+    a: integer
+    b: integer
+    -> true
+    -> false
+
+/**
+ * Compares two integers a and b and returns true if a is equal b.
+ *
+ * @param a : An integer value that will be compared to another parameter b.
+ * @param b : An integer value that will be compared to another parameter a.
+ * @return : Returns true if the parameters are equal and false if not.
+ */    
+
+sib IntegerEquals : info.scce.dime.common.CommonNativeIntegerServiceLibrary#equals
+    a: integer
+    b: integer
+    -> true
+    -> false
+
+/**
+ * Compares two integers a and b and returns true if a is equal to or greater than b.
+ *
+ * @param a : An integer value that will be compared to another parameter b.
+ * @param b : An integer value that will be compared to another parameter a.
+ * @return : Returns true if a is equal to or greater than b and false if not.
+ */
+sib IntegerGreaterOrEquals : info.scce.dime.common.CommonNativeIntegerServiceLibrary#greaterOrEquals
+    a: integer
+    b: integer
+    -> true
+    -> false
+
+/**
+ * Compares two integers a and b and returns true if a is greater than b.
+ *
+ * @param a : An integer value that will be compared to another parameter b.
+ * @param b : An integer value that will be compared to another parameter a.
+ * @return : Returns true if a is greater than b and false if not.
+ */
+sib IntegerGreater : info.scce.dime.common.CommonNativeIntegerServiceLibrary#greater
+    a: integer
+    b: integer
+    -> true
+    -> false
+
+
+/**
+ * Converts an integer value to a real one.
+ *
+ * @param a : The value that will be converted.
+ */
+sib IntegerToReal : info.scce.dime.common.CommonNativeIntegerServiceLibrary#toReal
+    a: integer
+    -> success
+        result: real
+    -> failure
+
+/**
+ * Converts an integer value to text.
+ *
+ * @param a : The value that will be converted.
+ */
+sib IntegerToString : info.scce.dime.common.CommonNativeIntegerServiceLibrary#toString
+    a: integer
+    -> success
+        result: text

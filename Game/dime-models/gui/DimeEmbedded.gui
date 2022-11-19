@@ -1,0 +1,35 @@
+GUI _ERWl4WZYEe2X7s_wBoiCCg {
+  fullWidth false
+  disableAutoLayout false
+  additionalJavaScript [  ]
+  additionalStylesheets [  ]
+  title "Dime%20Embedded"
+  DataContext _ERYbEWZYEe2X7s_wBoiCCg at 10,10 size 180,130 {
+  	dfViewWorkaround true
+  }
+  
+  Template _ERYbE2ZYEe2X7s_wBoiCCg at 240,10 size 220,140 {
+  	blockName ""
+  	disableAutoLayout false
+  	generalStyle GeneralStyling _ERZCIGZYEe2X7s_wBoiCCg {
+  			tallness Fitting
+  			marginBottom None
+  			attributes [  ]
+  			marginTop None
+  		}
+  	Embedded _GnIxgWZYEe2X7s_wBoiCCg at 10,30 size 200,80 {
+  		source "https://www.nytimes.com/games/wordle/index.html"
+  		generalStyle GeneralStyling _GnJ_omZYEe2X7s_wBoiCCg {
+  				tallness Fitting
+  				marginBottom None
+  				attributes [  ]
+  				marginTop None
+  			}
+  		MoveUp _GnJYkWZYEe2X7s_wBoiCCg at 2,2 size 14,7 {
+  		}
+  		
+  		MoveDown _GnJ_oWZYEe2X7s_wBoiCCg at 2,10 size 14,7 {
+  		}
+  	}
+  }
+}
