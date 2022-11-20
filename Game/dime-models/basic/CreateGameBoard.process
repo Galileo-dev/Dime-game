@@ -1,0 +1,26 @@
+Process _tJCRcWgCEe26INXZLVmsEA {
+  modelName "CreateGameBoard"
+  description "CreateGameBoard"
+  dataFlowView true
+  processType Basic
+  isStateful false
+  DataContext _tJEtsWgCEe26INXZLVmsEA at 20,20 size 210,545 {
+  	dfViewWorkaround true
+  }
+  
+  EndSIB _tJGi4WgCEe26INXZLVmsEA at 330,500 size 100,90 {
+  	branchName "success"
+  	ComplexInputPort _dD-1QWgJEe26INXZLVmsEA at 5,67 size 90,18 {
+  		libraryComponentUID "_gahvsWZbEe2X7s_wBoiCCg"
+  		isList false
+  		name "table"
+  	}
+  }
+  
+  StartSIB _MLKPMWjTEe2n4JFjonafYA at 320,50 size 100,65 {
+  	-ControlFlow-> _tJGi4WgCEe26INXZLVmsEA  decorate "" at (0,0) {
+  		id _NMjawWjTEe2n4JFjonafYA
+  		concurrent true
+  	}
+  }
+}

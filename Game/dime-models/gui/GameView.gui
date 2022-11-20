@@ -4,28 +4,63 @@ GUI _oKdnAWf0Ee2cveXnmwOj_g {
   additionalJavaScript [  ]
   additionalStylesheets [  ]
   title "GameView"
-  DataContext _oKfcMWf0Ee2cveXnmwOj_g at 10,10 size 180,145 {
+  DataContext _oKfcMWf0Ee2cveXnmwOj_g at 10,10 size 180,312 {
   	dfViewWorkaround true
-  	PrimitiveVariable _R4HJ0Wf1Ee2cveXnmwOj_g at 30,50 size 140,25 {
-  		dataType Text
-  		isInput true
-  		name "variable"
-  		dfViewWorkaround true
-  		isList false
-  	}
-  	
   	ComplexVariable _UGRDcWf1Ee2cveXnmwOj_g at 10,90 size 160,25 {
-  		expanded false
+  		expanded true
   		isLive false
   		libraryComponentUID "_gahvsWZbEe2X7s_wBoiCCg"
   		isInput true
   		name "table"
   		dfViewWorkaround true
+  		isList false
+  		-ComplexAttributeConnector-> _kfVC8Wf9Ee26INXZLVmsEA  decorate "Ellipse" at (0,0) {
+  			id _kfXfMWf9Ee26INXZLVmsEA
+  			associationName "tableRow"
+  		}
+  		
+  		-IF-> _oKhRYWf0Ee2cveXnmwOj_g  decorate "" at (0,0) decorate "Text" at (0,0) {
+  			id _bhS7gWf-Ee26INXZLVmsEA
+  			negate false
+  		}
+  	}
+  	
+  	ComplexVariable _kfVC8Wf9Ee26INXZLVmsEA at 10,150 size 160,132 {
+  		expanded true
+  		isLive false
+  		libraryComponentUID "_lWXXkWZbEe2X7s_wBoiCCg"
+  		isInput false
+  		name "tableRows"
+  		dfViewWorkaround true
   		isList true
+  		ComplexListAttribute _J7mQIWf-Ee26INXZLVmsEA at 10,50 size 140,25 {
+  			attributeName first
+  			libraryComponentUID "_lWXXkWZbEe2X7s_wBoiCCg"
+  			isLive false
+  		}
+  		
+  		ComplexListAttribute _J7neQWf-Ee26INXZLVmsEA at 10,77 size 140,25 {
+  			attributeName last
+  			libraryComponentUID "_lWXXkWZbEe2X7s_wBoiCCg"
+  			isLive false
+  		}
+  		
+  		ComplexListAttribute _J7oFUGf-Ee26INXZLVmsEA at 10,23 size 140,25 {
+  			attributeName current
+  			libraryComponentUID "_lWXXkWZbEe2X7s_wBoiCCg"
+  			isLive false
+  		}
+  		
+  		PrimitiveListAttribute _J7osYWf-Ee26INXZLVmsEA at 10,104 size 140,25 {
+  			attributeName size
+  			primitiveType Integer
+  			libraryComponentUID "_lWXXkWZbEe2X7s_wBoiCCg"
+  			isLive false
+  		}
   	}
   }
   
-  Template _oKgDQWf0Ee2cveXnmwOj_g at 240,10 size 150,190 {
+  Template _oKgDQWf0Ee2cveXnmwOj_g at 240,10 size 320,360 {
   	blockName ""
   	disableAutoLayout false
   	generalStyle GeneralStyling _oKgqUGf0Ee2cveXnmwOj_g {
@@ -34,7 +69,7 @@ GUI _oKdnAWf0Ee2cveXnmwOj_g {
   			attributes [  ]
   			marginTop None
   		}
-  	Row _oKhRYWf0Ee2cveXnmwOj_g at 10,30 size 130,130 {
+  	Row _oKhRYWf0Ee2cveXnmwOj_g at 10,30 size 300,300 {
   		generalStyle GeneralStyling _oKk7wmf0Ee2cveXnmwOj_g {
   				tallness Fitting
   				marginBottom None
@@ -47,7 +82,7 @@ GUI _oKdnAWf0Ee2cveXnmwOj_g {
   		MoveDown _oKh4c2f0Ee2cveXnmwOj_g at 2,10 size 14,7 {
   		}
   		
-  		Col _oKjGkWf0Ee2cveXnmwOj_g at 10,30 size 100,80 {
+  		Col _oKjGkWf0Ee2cveXnmwOj_g at 10,30 size 270,250 {
   			wideness Full
   			layout Layout _oKk7wWf0Ee2cveXnmwOj_g {
   					size Default
@@ -64,6 +99,54 @@ GUI _oKdnAWf0Ee2cveXnmwOj_g {
   			}
   			
   			MoveRight _oKjtoWf0Ee2cveXnmwOj_g at 10,2 size 7,14 {
+  			}
+  			
+  			Row _zHdJ8Wf9Ee26INXZLVmsEA at 10,30 size 250,190 {
+  				generalStyle GeneralStyling _zHg0UGf9Ee26INXZLVmsEA {
+  						tallness Fitting
+  						marginBottom None
+  						attributes [  ]
+  						marginTop None
+  					}
+  				MoveUp _zHdxAWf9Ee26INXZLVmsEA at 2,2 size 14,7 {
+  				}
+  				
+  				MoveDown _zHdxA2f9Ee26INXZLVmsEA at 2,10 size 14,7 {
+  				}
+  				
+  				Col _zHeYEWf9Ee26INXZLVmsEA at 10,30 size 220,140 {
+  					wideness Full
+  					layout Layout _zHe_IWf9Ee26INXZLVmsEA {
+  							size Default
+  							offset None
+  							alignment Left
+  						}
+  					generalStyle GeneralStyling _zHe_IGf9Ee26INXZLVmsEA {
+  							tallness Fitting
+  							marginBottom None
+  							attributes [  ]
+  							marginTop None
+  						}
+  					MoveLeft _zHeYE2f9Ee26INXZLVmsEA at 2,2 size 7,14 {
+  					}
+  					
+  					MoveRight _zHeYFWf9Ee26INXZLVmsEA at 10,2 size 7,14 {
+  					}
+  					
+  					Jumbotron _zeg_EWf9Ee26INXZLVmsEA at 10,30 size 200,80 {
+  						generalStyle GeneralStyling _zeiNMGf9Ee26INXZLVmsEA {
+  								tallness Fitting
+  								marginBottom None
+  								attributes [  ]
+  								marginTop None
+  							}
+  						MoveUp _zehmIWf9Ee26INXZLVmsEA at 2,2 size 14,7 {
+  						}
+  						
+  						MoveDown _zehmI2f9Ee26INXZLVmsEA at 2,10 size 14,7 {
+  						}
+  					}
+  				}
   			}
   		}
   	}

@@ -13,7 +13,7 @@ GUI _LmrS0Ej8EeaK4_MRcoLfnw {
   	disableAutoLayout false
   	Jumbotron _6CcloEmAEeaUSpYQeYyxnQ at 10,30 size 370,360 {
   		generalStyle GeneralStyling _hH5ScTD2EemwX93gZgy7kw {
-  				tallness Fitting
+  				tallness Full
   				marginBottom None
   				attributes [  ]
   				marginTop None
@@ -26,7 +26,7 @@ GUI _LmrS0Ej8EeaK4_MRcoLfnw {
   		
   		Row _pqsksE_OEeauEZ95mLTQ7g at 10,30 size 350,300 {
   			generalStyle GeneralStyling _hH5SczD2EemwX93gZgy7kw {
-  					tallness Fitting
+  					tallness Full
   					marginBottom None
   					attributes [  ]
   					marginTop None
@@ -84,7 +84,7 @@ GUI _LmrS0Ej8EeaK4_MRcoLfnw {
   							fullWidth false
   							size Default
   							disabled false
-  							color Default
+  							color Green
   						}
   					options ButtonOptions _uZ6_kGZXEe2X7s_wBoiCCg {
   							isLink false
@@ -115,7 +115,7 @@ GUI _LmrS0Ej8EeaK4_MRcoLfnw {
   							fullWidth false
   							size Default
   							disabled false
-  							color Default
+  							color Blue
   						}
   					options ButtonOptions _vCSnIGZXEe2X7s_wBoiCCg {
   							isLink false
