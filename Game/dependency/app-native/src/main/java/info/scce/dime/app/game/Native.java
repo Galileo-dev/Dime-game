@@ -76,23 +76,20 @@ public class Native {
 
 
 	public Table init(long width, long height){
-		System.err.println("BEFORE CONTROLLER");
-		Table table = tController.create("Hello");
-		System.err.println("AFTER CONTROLLER");
-
+			Table table = getBean(TableController.class).create(null);
 
 
 		List<TableRow> tableRowList = new ArrayList<TableRow>();
 		for (int x = 0; x < width; x++) {
-//			TableRow tableRow = getBean(TableRowController.class).create(null);
+			TableRow tableRow = getBean(TableRowController.class).create(null);
 			System.err.println("inside for loop x =" + x);
-			TableRow tableRow = trController.create("Hello");
+//			TableRow tableRow = trController.create("Hello");
 			List<TableEntry> tableEntryList = new ArrayList<TableEntry>();
 			for (int y = 0; y < height; y++) {
 
 				System.err.println("inside nested for loop y =" + y);
-//				TableEntry tableEntry = getBean(TableEntryController.class).create(null);
-				TableEntry tableEntry = teController.create("Hello");
+				TableEntry tableEntry = getBean(TableEntryController.class).create(null);
+//				TableEntry tableEntry = teController.create("Hello");
 				tableEntry.setvalue("1");
 				tableEntryList.add(tableEntry);
 			}
