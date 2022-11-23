@@ -8,10 +8,6 @@ Process _j3BMEWZYEe2X7s_wBoiCCg {
   	dfViewWorkaround true
   }
   
-  EndSIB _j3GEkWZYEe2X7s_wBoiCCg at 360,650 size 100,65 {
-  	branchName "Back"
-  }
-  
   GUISIB _q8wvgWf0Ee2cveXnmwOj_g at 320,402 size 120,90 {
   	cacheGUI false
   	majorPage true
@@ -26,41 +22,45 @@ Process _j3BMEWZYEe2X7s_wBoiCCg {
   	}
   }
   
-  AtomicSIB _1DuVYGjZEe2n4JFjonafYA at 320,150 size 120,108 index 4 {
+  StartSIB _9uYckWjSEe2n4JFjonafYA at 330,15 size 100,65 {
+  	-ControlFlow-> _Wci28WppEe236dA0zXkgQA  decorate "" at (0,0) {
+  		id _X7f7sWp-Ee2OydDI-VipgA
+  		concurrent true
+  	}
+  }
+  
+  AtomicSIB _Wci28WppEe236dA0zXkgQA at 330,140 size 120,108 {
   	libraryComponentUID "app.game.CreateGameBoard"
   	label "CreateGameBoard"
   	ignoredBranch [  ]
-  	IntegerInputStatic _2VwlAWjZEe2n4JFjonafYA at 5,67 size 110,18 {
+  	IntegerInputStatic _eVF7AWp-Ee2OydDI-VipgA at 5,67 size 110,18 {
   		value 5
   		name "width"
   	}
   	
-  	IntegerInputStatic _2PSwoGjZEe2n4JFjonafYA at 5,85 size 110,18 {
+  	IntegerInputStatic _eoGWlmp-Ee2OydDI-VipgA at 5,85 size 110,18 {
   		value 5
   		name "height"
   	}
-  	-BranchConnector-> _1Dz08WjZEe2n4JFjonafYA   {
-  		id _1D0cAWjZEe2n4JFjonafYA
+  	-BranchConnector-> _WcvrQWppEe236dA0zXkgQA   {
+  		id _Wcw5YGppEe236dA0zXkgQA
   		concurrent true
   	}
   }
   
-  StartSIB _9uYckWjSEe2n4JFjonafYA at 330,15 size 100,65 index 3 {
-  	-ControlFlow-> _1DuVYGjZEe2n4JFjonafYA  decorate "" at (0,0) {
-  		id _2IuOkWjZEe2n4JFjonafYA
-  		concurrent true
-  	}
-  }
-  
-  Branch _1Dz08WjZEe2n4JFjonafYA at 320,310 size 120,50 {
+  Branch _WcvrQWppEe236dA0zXkgQA at 337,263 size 120,50 {
   	name "success"
-  	ComplexOutputPort _1D1qIWjZEe2n4JFjonafYA at 5,27 size 110,18 {
+  	ComplexOutputPort _WcxgcWppEe236dA0zXkgQA at 5,27 size 110,18 {
   		libraryComponentUID "_gahvsWZbEe2X7s_wBoiCCg"
   		isList false
   		name "Table"
+  		-ComplexDirectDataFlow-> _U4X10Wf1Ee2cveXnmwOj_g via (310,299) (310,478) decorate "" at (0,0) {
+  			id _tbjT4WpqEe2OydDI-VipgA
+  			dfViewWorkaround true
+  		}
   	}
   	-ControlFlow-> _q8wvgWf0Ee2cveXnmwOj_g  decorate "" at (0,0) {
-  		id _12vGsWjZEe2n4JFjonafYA
+  		id _XFlz8WppEe236dA0zXkgQA
   		concurrent true
   	}
   }

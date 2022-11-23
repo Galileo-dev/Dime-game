@@ -58,17 +58,5 @@ Process _LWgagF-SEeakMeYoloYxpg {
   	libraryComponentUID "_j3BMEWZYEe2X7s_wBoiCCg"
   	label "Game"
   	ignoredBranch [  ]
-  	-BranchConnector-> _pJ9FUWZYEe2X7s_wBoiCCg   {
-  		id _pJ-TcWZYEe2X7s_wBoiCCg
-  		concurrent true
-  	}
-  }
-  
-  Branch _pJ9FUWZYEe2X7s_wBoiCCg at 190,260 size 120,25 {
-  	name "Back"
-  	-ControlFlow-> _-xUtUGUQEea0lrrxwspd7g  decorate "" at (0,0) {
-  		id _sOLrUWZYEe2X7s_wBoiCCg
-  		concurrent true
-  	}
   }
 }
