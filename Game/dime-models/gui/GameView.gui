@@ -4,88 +4,124 @@ GUI _oKdnAWf0Ee2cveXnmwOj_g {
   additionalJavaScript [  ]
   additionalStylesheets [  ]
   title "GameView"
-  DataContext _oKfcMWf0Ee2cveXnmwOj_g at 30,-80 size 180,571 {
+  DataContext _oKfcMWf0Ee2cveXnmwOj_g at 30,-80 size 180,581 {
   	dfViewWorkaround true
   	ComplexVariable _UGRDcWf1Ee2cveXnmwOj_g at 10,90 size 160,25 {
-  		expanded true
+  		expanded false
   		isLive false
   		libraryComponentUID "_gahvsWZbEe2X7s_wBoiCCg"
   		isInput true
   		name "table"
   		dfViewWorkaround true
   		isList false
-  		-ComplexAttributeConnector-> _kfVC8Wf9Ee26INXZLVmsEA  decorate "Ellipse" at (0,0) {
-  			id _kfXfMWf9Ee26INXZLVmsEA
-  			associationName "tableRow"
-  		}
-  		
   		-IF-> _oKhRYWf0Ee2cveXnmwOj_g  decorate "" at (0,0) decorate "Text" at (0,0) {
   			id _bhS7gWf-Ee26INXZLVmsEA
   			negate false
   		}
-  	}
-  	
-  	ComplexVariable _kfVC8Wf9Ee26INXZLVmsEA at 10,140 size 160,25 {
-  		expanded false
-  		isLive false
-  		libraryComponentUID "_lWXXkWZbEe2X7s_wBoiCCg"
-  		isInput false
-  		name "tableRows"
-  		dfViewWorkaround true
-  		isList true
-  		-ComplexListAttributeConnector-> _aFl0cWsdEe2k16ODBqT7qA  decorate "Ellipse" at (0,0) {
-  			id _aFvlcGsdEe2k16ODBqT7qA
-  			attributeName current
-  		}
   		
-  		-FOR-> _zHdJ8Wf9Ee26INXZLVmsEA  decorate "" at (0,0) decorate "Text" at (0,0) {
-  			id _kPjHAGsdEe2k16ODBqT7qA
-  			index "index"
+  		-ComplexAttributeConnector-> _dMcCEWtIEe2k16ODBqT7qA  decorate "Ellipse" at (0,0) {
+  			id _dMfFYWtIEe2k16ODBqT7qA
+  			associationName "tableRow"
   		}
   	}
   	
-  	ComplexVariable _aFl0cWsdEe2k16ODBqT7qA at 10,270 size 160,25 {
-  		expanded false
+  	ComplexVariable _dMcCEWtIEe2k16ODBqT7qA at 10,150 size 160,105 {
+  		expanded true
   		isLive false
   		libraryComponentUID "_lWXXkWZbEe2X7s_wBoiCCg"
   		isInput false
   		name "tableRow"
   		dfViewWorkaround true
+  		isList true
+  		ComplexListAttribute _eGDKoWtIEe2k16ODBqT7qA at 10,23 size 140,25 {
+  			attributeName first
+  			libraryComponentUID "_lWXXkWZbEe2X7s_wBoiCCg"
+  			isLive false
+  		}
+  		
+  		ComplexListAttribute _eGDxsWtIEe2k16ODBqT7qA at 10,50 size 140,25 {
+  			attributeName last
+  			libraryComponentUID "_lWXXkWZbEe2X7s_wBoiCCg"
+  			isLive false
+  		}
+  		
+  		PrimitiveListAttribute _eGE_0WtIEe2k16ODBqT7qA at 10,77 size 140,25 {
+  			attributeName size
+  			primitiveType Integer
+  			libraryComponentUID "_lWXXkWZbEe2X7s_wBoiCCg"
+  			isLive false
+  		}
+  		-ComplexListAttributeConnector-> _ewoYsWtIEe2k16ODBqT7qA  decorate "Ellipse" at (0,0) {
+  			id _ewqN4WtIEe2k16ODBqT7qA
+  			attributeName current
+  		}
+  		
+  		-FOR-> _zHdJ8Wf9Ee26INXZLVmsEA  decorate "" at (0,0) decorate "Text" at (0,0) {
+  			id _k-iscWtIEe2k16ODBqT7qA
+  			index "index"
+  		}
+  	}
+  	
+  	ComplexVariable _ewoYsWtIEe2k16ODBqT7qA at 10,300 size 160,25 {
+  		expanded true
+  		isLive false
+  		libraryComponentUID "_lWXXkWZbEe2X7s_wBoiCCg"
+  		isInput false
+  		name "currentRow"
+  		dfViewWorkaround true
   		isList false
-  		-ComplexAttributeConnector-> _cygGoWsdEe2k16ODBqT7qA  decorate "Ellipse" at (0,0) {
-  			id _cyh70WsdEe2k16ODBqT7qA
+  		-ComplexAttributeConnector-> _fUdegWtIEe2k16ODBqT7qA  decorate "Ellipse" at (0,0) {
+  			id _fUesoWtIEe2k16ODBqT7qA
   			associationName "tableEntry"
   		}
   	}
   	
-  	ComplexVariable _cygGoWsdEe2k16ODBqT7qA at 10,350 size 160,25 {
-  		expanded false
-  		isLive false
-  		libraryComponentUID "_pPCSQWZbEe2X7s_wBoiCCg"
-  		isInput false
-  		name "tableEntrys"
-  		dfViewWorkaround true
-  		isList true
-  		-ComplexListAttributeConnector-> _doJVMWsdEe2k16ODBqT7qA  decorate "Ellipse" at (0,0) {
-  			id _doKjUWsdEe2k16ODBqT7qA
-  			attributeName current
-  		}
-  		
-  		-FOR-> _zHeYEWf9Ee26INXZLVmsEA  decorate "" at (0,0) decorate "Text" at (0,0) {
-  			id _nxC30WsdEe2k16ODBqT7qA
-  			index "index1"
-  		}
-  	}
-  	
-  	ComplexVariable _doJVMWsdEe2k16ODBqT7qA at 10,490 size 160,51 {
+  	ComplexVariable _fUdegWtIEe2k16ODBqT7qA at 10,360 size 160,105 {
   		expanded true
   		isLive false
   		libraryComponentUID "_pPCSQWZbEe2X7s_wBoiCCg"
   		isInput false
   		name "tableEntry"
   		dfViewWorkaround true
+  		isList true
+  		ComplexListAttribute _fUi-EWtIEe2k16ODBqT7qA at 10,23 size 140,25 {
+  			attributeName first
+  			libraryComponentUID "_pPCSQWZbEe2X7s_wBoiCCg"
+  			isLive false
+  		}
+  		
+  		ComplexListAttribute _fUkMMWtIEe2k16ODBqT7qA at 10,50 size 140,25 {
+  			attributeName last
+  			libraryComponentUID "_pPCSQWZbEe2X7s_wBoiCCg"
+  			isLive false
+  		}
+  		
+  		PrimitiveListAttribute _fUmocWtIEe2k16ODBqT7qA at 10,77 size 140,25 {
+  			attributeName size
+  			primitiveType Integer
+  			libraryComponentUID "_pPCSQWZbEe2X7s_wBoiCCg"
+  			isLive false
+  		}
+  		-ComplexListAttributeConnector-> _gncwYWtIEe2k16ODBqT7qA  decorate "Ellipse" at (0,0) {
+  			id _gnelkWtIEe2k16ODBqT7qA
+  			attributeName current
+  		}
+  		
+  		-FOR-> _zeg_EWf9Ee26INXZLVmsEA  decorate "" at (0,0) decorate "Text" at (0,0) {
+  			id _nZKUwWtIEe2k16ODBqT7qA
+  			index "index1"
+  		}
+  	}
+  	
+  	ComplexVariable _gncwYWtIEe2k16ODBqT7qA at 10,500 size 160,51 {
+  		expanded true
+  		isLive false
+  		libraryComponentUID "_pPCSQWZbEe2X7s_wBoiCCg"
+  		isInput false
+  		name "current"
+  		dfViewWorkaround true
   		isList false
-  		PrimitiveAttribute _doZz4GsdEe2k16ODBqT7qA at 10,23 size 140,25 {
+  		PrimitiveAttribute _gni3AWtIEe2k16ODBqT7qA at 10,23 size 140,25 {
   			libraryComponentUID "_1rhoIWZbEe2X7s_wBoiCCg"
   			isLive false
   		}
@@ -183,7 +219,7 @@ GUI _oKdnAWf0Ee2cveXnmwOj_g {
   									renderMarkdown false
   									maxChars 0
   									html false
-  									rawContent "{{tableEntry.value}}"
+  									rawContent "{{current.value}}"
   									styling TextStyling _4TJYMGsdEe2k16ODBqT7qA {
   											small false
   											highlight false
