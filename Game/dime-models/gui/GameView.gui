@@ -4,7 +4,7 @@ GUI _oKdnAWf0Ee2cveXnmwOj_g {
   additionalJavaScript [  ]
   additionalStylesheets [  ]
   title "GameView"
-  DataContext _oKfcMWf0Ee2cveXnmwOj_g at 10,10 size 180,312 {
+  DataContext _oKfcMWf0Ee2cveXnmwOj_g at 30,-80 size 180,571 {
   	dfViewWorkaround true
   	ComplexVariable _UGRDcWf1Ee2cveXnmwOj_g at 10,90 size 160,25 {
   		expanded true
@@ -25,42 +25,74 @@ GUI _oKdnAWf0Ee2cveXnmwOj_g {
   		}
   	}
   	
-  	ComplexVariable _kfVC8Wf9Ee26INXZLVmsEA at 10,150 size 160,132 {
-  		expanded true
+  	ComplexVariable _kfVC8Wf9Ee26INXZLVmsEA at 10,140 size 160,25 {
+  		expanded false
   		isLive false
   		libraryComponentUID "_lWXXkWZbEe2X7s_wBoiCCg"
   		isInput false
   		name "tableRows"
   		dfViewWorkaround true
   		isList true
-  		ComplexListAttribute _J7mQIWf-Ee26INXZLVmsEA at 10,50 size 140,25 {
-  			attributeName first
-  			libraryComponentUID "_lWXXkWZbEe2X7s_wBoiCCg"
-  			isLive false
-  		}
-  		
-  		ComplexListAttribute _J7neQWf-Ee26INXZLVmsEA at 10,77 size 140,25 {
-  			attributeName last
-  			libraryComponentUID "_lWXXkWZbEe2X7s_wBoiCCg"
-  			isLive false
-  		}
-  		
-  		ComplexListAttribute _J7oFUGf-Ee26INXZLVmsEA at 10,23 size 140,25 {
+  		-ComplexListAttributeConnector-> _aFl0cWsdEe2k16ODBqT7qA  decorate "Ellipse" at (0,0) {
+  			id _aFvlcGsdEe2k16ODBqT7qA
   			attributeName current
-  			libraryComponentUID "_lWXXkWZbEe2X7s_wBoiCCg"
-  			isLive false
   		}
   		
-  		PrimitiveListAttribute _J7osYWf-Ee26INXZLVmsEA at 10,104 size 140,25 {
-  			attributeName size
-  			primitiveType Integer
-  			libraryComponentUID "_lWXXkWZbEe2X7s_wBoiCCg"
+  		-FOR-> _zHdJ8Wf9Ee26INXZLVmsEA  decorate "" at (0,0) decorate "Text" at (0,0) {
+  			id _kPjHAGsdEe2k16ODBqT7qA
+  			index "index"
+  		}
+  	}
+  	
+  	ComplexVariable _aFl0cWsdEe2k16ODBqT7qA at 10,270 size 160,25 {
+  		expanded false
+  		isLive false
+  		libraryComponentUID "_lWXXkWZbEe2X7s_wBoiCCg"
+  		isInput false
+  		name "tableRow"
+  		dfViewWorkaround true
+  		isList false
+  		-ComplexAttributeConnector-> _cygGoWsdEe2k16ODBqT7qA  decorate "Ellipse" at (0,0) {
+  			id _cyh70WsdEe2k16ODBqT7qA
+  			associationName "tableEntry"
+  		}
+  	}
+  	
+  	ComplexVariable _cygGoWsdEe2k16ODBqT7qA at 10,350 size 160,25 {
+  		expanded false
+  		isLive false
+  		libraryComponentUID "_pPCSQWZbEe2X7s_wBoiCCg"
+  		isInput false
+  		name "tableEntrys"
+  		dfViewWorkaround true
+  		isList true
+  		-ComplexListAttributeConnector-> _doJVMWsdEe2k16ODBqT7qA  decorate "Ellipse" at (0,0) {
+  			id _doKjUWsdEe2k16ODBqT7qA
+  			attributeName current
+  		}
+  		
+  		-FOR-> _zHeYEWf9Ee26INXZLVmsEA  decorate "" at (0,0) decorate "Text" at (0,0) {
+  			id _nxC30WsdEe2k16ODBqT7qA
+  			index "index1"
+  		}
+  	}
+  	
+  	ComplexVariable _doJVMWsdEe2k16ODBqT7qA at 10,490 size 160,51 {
+  		expanded true
+  		isLive false
+  		libraryComponentUID "_pPCSQWZbEe2X7s_wBoiCCg"
+  		isInput false
+  		name "tableEntry"
+  		dfViewWorkaround true
+  		isList false
+  		PrimitiveAttribute _doZz4GsdEe2k16ODBqT7qA at 10,23 size 140,25 {
+  			libraryComponentUID "_1rhoIWZbEe2X7s_wBoiCCg"
   			isLive false
   		}
   	}
   }
   
-  Template _oKgDQWf0Ee2cveXnmwOj_g at 240,10 size 320,360 {
+  Template _oKgDQWf0Ee2cveXnmwOj_g at 240,10 size 340,400 {
   	blockName ""
   	disableAutoLayout false
   	generalStyle GeneralStyling _oKgqUGf0Ee2cveXnmwOj_g {
@@ -69,7 +101,7 @@ GUI _oKdnAWf0Ee2cveXnmwOj_g {
   			attributes [  ]
   			marginTop None
   		}
-  	Row _oKhRYWf0Ee2cveXnmwOj_g at 10,30 size 300,300 {
+  	Row _oKhRYWf0Ee2cveXnmwOj_g at 10,30 size 320,340 {
   		generalStyle GeneralStyling _oKk7wmf0Ee2cveXnmwOj_g {
   				tallness Fitting
   				marginBottom None
@@ -82,7 +114,7 @@ GUI _oKdnAWf0Ee2cveXnmwOj_g {
   		MoveDown _oKh4c2f0Ee2cveXnmwOj_g at 2,10 size 14,7 {
   		}
   		
-  		Col _oKjGkWf0Ee2cveXnmwOj_g at 10,30 size 270,250 {
+  		Col _oKjGkWf0Ee2cveXnmwOj_g at 10,30 size 290,290 {
   			wideness Full
   			layout Layout _oKk7wWf0Ee2cveXnmwOj_g {
   					size Default
@@ -101,7 +133,7 @@ GUI _oKdnAWf0Ee2cveXnmwOj_g {
   			MoveRight _oKjtoWf0Ee2cveXnmwOj_g at 10,2 size 7,14 {
   			}
   			
-  			Row _zHdJ8Wf9Ee26INXZLVmsEA at 10,30 size 250,190 {
+  			Row _zHdJ8Wf9Ee26INXZLVmsEA at 10,30 size 270,230 {
   				generalStyle GeneralStyling _zHg0UGf9Ee26INXZLVmsEA {
   						tallness Fitting
   						marginBottom None
@@ -114,7 +146,7 @@ GUI _oKdnAWf0Ee2cveXnmwOj_g {
   				MoveDown _zHdxA2f9Ee26INXZLVmsEA at 2,10 size 14,7 {
   				}
   				
-  				Col _zHeYEWf9Ee26INXZLVmsEA at 10,30 size 220,140 {
+  				Col _zHeYEWf9Ee26INXZLVmsEA at 10,30 size 240,180 {
   					wideness Full
   					layout Layout _zHe_IWf9Ee26INXZLVmsEA {
   							size Default
@@ -133,7 +165,7 @@ GUI _oKdnAWf0Ee2cveXnmwOj_g {
   					MoveRight _zHeYFWf9Ee26INXZLVmsEA at 10,2 size 7,14 {
   					}
   					
-  					Jumbotron _zeg_EWf9Ee26INXZLVmsEA at 10,30 size 200,80 {
+  					Jumbotron _zeg_EWf9Ee26INXZLVmsEA at 10,30 size 220,120 {
   						generalStyle GeneralStyling _zeiNMGf9Ee26INXZLVmsEA {
   								tallness Fitting
   								marginBottom None
@@ -144,6 +176,36 @@ GUI _oKdnAWf0Ee2cveXnmwOj_g {
   						}
   						
   						MoveDown _zehmI2f9Ee26INXZLVmsEA at 2,10 size 14,7 {
+  						}
+  						
+  						Text _4TBcYGsdEe2k16ODBqT7qA at 10,30 size 200,60 {
+  							content [ StaticContent _4THjAWsdEe2k16ODBqT7qA {
+  									renderMarkdown false
+  									maxChars 0
+  									html false
+  									rawContent "{{tableEntry.value}}"
+  									styling TextStyling _4TJYMGsdEe2k16ODBqT7qA {
+  											small false
+  											highlight false
+  											deleted false
+  											underline false
+  											bold false
+  											alignment Left
+  											italic false
+  											color Default
+  										}
+  								} ]
+  							generalStyle GeneralStyling _4THjAGsdEe2k16ODBqT7qA {
+  									tallness Fitting
+  									marginBottom None
+  									attributes [  ]
+  									marginTop None
+  								}
+  							MoveUp _4TFt0WsdEe2k16ODBqT7qA at 2,2 size 14,7 {
+  							}
+  							
+  							MoveDown _4TFt02sdEe2k16ODBqT7qA at 2,10 size 14,7 {
+  							}
   						}
   					}
   				}
