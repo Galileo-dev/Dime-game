@@ -27,6 +27,11 @@ Process _LWgagF-SEeakMeYoloYxpg {
   		id _-4H3YWZXEe2X7s_wBoiCCg
   		concurrent true
   	}
+  	
+  	-BranchConnector-> _muWIsW_TEe2xPKxOfn4Ofw   {
+  		id _muZMAW_TEe2xPKxOfn4Ofw
+  		concurrent true
+  	}
   }
   
   Branch _-4FbIWZXEe2X7s_wBoiCCg at 200,170 size 120,25 {
@@ -37,7 +42,7 @@ Process _LWgagF-SEeakMeYoloYxpg {
   	}
   }
   
-  Branch _-4HQUWZXEe2X7s_wBoiCCg at 51,250 size 120,25 {
+  Branch _-4HQUWZXEe2X7s_wBoiCCg at 40,240 size 120,25 {
   	name "Dime"
   	-ControlFlow-> _pJ4M0WZYEe2X7s_wBoiCCg  decorate "" at (0,0) {
   		id _pedVsWZYEe2X7s_wBoiCCg
@@ -54,9 +59,38 @@ Process _LWgagF-SEeakMeYoloYxpg {
   	ignoredBranch [  ]
   }
   
-  ProcessSIB _pJ4M0WZYEe2X7s_wBoiCCg at 100,340 size 120,65 {
+  ProcessSIB _pJ4M0WZYEe2X7s_wBoiCCg at 40,320 size 120,65 {
   	libraryComponentUID "_j3BMEWZYEe2X7s_wBoiCCg"
   	label "Game"
   	ignoredBranch [  ]
+  }
+  
+  Branch _muWIsW_TEe2xPKxOfn4Ofw at 200,240 size 120,25 {
+  	name "Online"
+  	-ControlFlow-> _p0uDwW_TEe2xPKxOfn4Ofw  decorate "" at (0,0) {
+  		id _qWn28G_TEe2xPKxOfn4Ofw
+  		concurrent true
+  	}
+  }
+  
+  GUISIB _p0uDwW_TEe2xPKxOfn4Ofw at 200,320 size 120,65 {
+  	cacheGUI false
+  	majorPage true
+  	libraryComponentUID "_NGHA8F4TEear0NzybbrMtw"
+  	name "PrivateHome"
+  	label "PrivateHome"
+  	ignoredBranch [  ]
+  	-BranchConnector-> _BWIfoW_UEe2xPKxOfn4Ofw   {
+  		id _BWJGsW_UEe2xPKxOfn4Ofw
+  		concurrent true
+  	}
+  }
+  
+  Branch _BWIfoW_UEe2xPKxOfn4Ofw at 200,410 size 120,25 {
+  	name "Play"
+  	-ControlFlow-> _pJ4M0WZYEe2X7s_wBoiCCg via (178,421) (178,353) decorate "" at (0,0) {
+  		id _B9dlYW_UEe2xPKxOfn4Ofw
+  		concurrent true
+  	}
   }
 }

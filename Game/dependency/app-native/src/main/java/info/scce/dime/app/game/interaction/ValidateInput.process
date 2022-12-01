@@ -1,0 +1,26 @@
+Process _y3RgAW_sEe2xPKxOfn4Ofw {
+  modelName "ValidateInput"
+  description "ValidateInput"
+  dataFlowView true
+  processType Basic
+  isStateful false
+  DataContext _y3SHEW_sEe2xPKxOfn4Ofw at 20,20 size 210,545 {
+  	dfViewWorkaround true
+  }
+  
+  StartSIB _y3TVMW_sEe2xPKxOfn4Ofw at 330,20 size 100,90 {
+  	PrimitiveOutputPort _5gWs0W_sEe2xPKxOfn4Ofw at 5,67 size 90,18 {
+  		dataType Text
+  		isList false
+  		name "word"
+  	}
+  	-ControlFlow-> _y3T8QW_sEe2xPKxOfn4Ofw  decorate "" at (0,0) {
+  		id _EUWa4W_tEe2xPKxOfn4Ofw
+  		concurrent true
+  	}
+  }
+  
+  EndSIB _y3T8QW_sEe2xPKxOfn4Ofw at 330,500 size 100,65 {
+  	branchName "success"
+  }
+}

@@ -9,10 +9,26 @@ sib SayHello : info.scce.dime.app.game.Native#sayHello
   name : text
   -> success
   
-
+ 
 sib CreateGameBoard : info.scce.dime.app.game.Native#createGameBoardWordle
     width : integer
     height: integer
     -> success
         Table : data.Table
         
+sib setRow : info.scce.dime.app.game.Native#setRow
+	row: data.TableRow
+	word: text
+	-> success
+	
+
+sib matchRow : info.scce.dime.app.game.Native#matchRow
+	row: data.currentRow
+	-> success
+	
+sib getNextRow : info.scce.dime.app.game.Native#getNextRow
+	currentRow: data.TableRow
+	rowList: [data.TableRow]
+	-> success
+		row : data.TableRow
+	-> noresult

@@ -84,11 +84,57 @@ Data _tH3fEMwMEeWZVvvwxpYu8A {
   	}
   }
   
-  ConcreteType _pPCSQWZbEe2X7s_wBoiCCg at 500,334 size 140,55 {
+  ConcreteType _pPCSQWZbEe2X7s_wBoiCCg at 500,334 size 140,73 {
   	name "TableEntry"
-  	PrimitiveAttribute _1rhoIWZbEe2X7s_wBoiCCg at 5,32 size 130,18 {
+  	PrimitiveAttribute _1rhoIWZbEe2X7s_wBoiCCg at 5,50 size 130,18 {
   		dataType Text
   		name "value"
+  		isList false
+  	}
+  	
+  	ComplexAttribute _FTkbAW_TEe2xPKxOfn4Ofw at 5,32 size 130,18 {
+  		dataType _oFjBoG_SEe2xPKxOfn4Ofw
+  		name "validation"
+  		isList false
+  	}
+  	-Association-> _oFjBoG_SEe2xPKxOfn4Ofw  decorate "Text" at (0,0) decorate "" at (0,0) {
+  		id _FTcfMW_TEe2xPKxOfn4Ofw
+  		isHidden false
+  		sourceAttr _FTkbAW_TEe2xPKxOfn4Ofw
+  	}
+  }
+  
+  ConcreteType _IcPdIG_IEe2xPKxOfn4Ofw at 830,250 size 140,55 {
+  	name "currentRow"
+  	ComplexAttribute _N50gIW_IEe2xPKxOfn4Ofw at 5,32 size 130,18 {
+  		dataType _lWXXkWZbEe2X7s_wBoiCCg
+  		name "tableRow"
+  		isList false
+  	}
+  	-Association-> _lWXXkWZbEe2X7s_wBoiCCg  decorate "Text" at (-91,10) decorate "" at (0,0) {
+  		id _N5qvIW_IEe2xPKxOfn4Ofw
+  		isHidden false
+  		sourceAttr _N50gIW_IEe2xPKxOfn4Ofw
+  	}
+  }
+  
+  EnumType _oFjBoG_SEe2xPKxOfn4Ofw at 830,330 size 140,91 {
+  	name "Validation"
+  	EnumLiteral _oPUBoG_SEe2xPKxOfn4Ofw at 5,32 size 130,18 {
+  		displayName "Full Match"
+  		name "fullMatch"
+  		isList false
+  	}
+  	
+  	EnumLiteral _2_DMgW_SEe2xPKxOfn4Ofw at 5,50 size 130,18 {
+  		displayName "Letter Match"
+  		name "letterMatch"
+  		isList false
+  	}
+  	
+  	EnumLiteral _3dUc4W_SEe2xPKxOfn4Ofw at 5,68 size 130,18 {
+  		displayName "No Match"
+  		name "noMatch"
   		isList false
   	}
   }
