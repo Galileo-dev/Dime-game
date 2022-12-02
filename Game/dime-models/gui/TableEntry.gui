@@ -21,14 +21,14 @@ GUI _Fo7dUXFPEe2Asu6OZgCjMA {
   				id _aL5LEXFPEe2Asu6OZgCjMA
   				exactMatch false
   				negate false
-  				matchingType "_3dUc4W_SEe2xPKxOfn4Ofw"
+  				matchingType "_oPUBoG_SEe2xPKxOfn4Ofw"
   			}
   			
   			-IS-> _KJfel3FPEe2Asu6OZgCjMA  decorate "" at (0,0) decorate "Text" at (0,0) {
   				id _anErMXFPEe2Asu6OZgCjMA
   				exactMatch false
   				negate false
-  				matchingType "_oPUBoG_SEe2xPKxOfn4Ofw"
+  				matchingType "_3dUc4W_SEe2xPKxOfn4Ofw"
   			}
   			
   			-IS-> _KJfev3FPEe2Asu6OZgCjMA  decorate "" at (0,0) decorate "Text" at (0,0) {
@@ -129,7 +129,7 @@ GUI _Fo7dUXFPEe2Asu6OZgCjMA {
   				}
   			generalStyle GeneralStyling _KJfepXFPEe2Asu6OZgCjMA {
   					tallness Fitting
-  					marginBottom None
+  					marginBottom Double
   					attributes [  ]
   					marginTop None
   					rawContent "width: 50px;\nheight: 50px;\nborder: 5px solid black;"
