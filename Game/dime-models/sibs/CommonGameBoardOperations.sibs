@@ -23,7 +23,8 @@ sib setRow : info.scce.dime.app.game.Native#setRow
 	
 
 sib matchRow : info.scce.dime.app.game.Native#matchRow
-	row: data.currentRow
+	row: data.TableRow
+	word: text
 	-> success
 	
 sib getNextRow : info.scce.dime.app.game.Native#getNextRow
@@ -32,3 +33,7 @@ sib getNextRow : info.scce.dime.app.game.Native#getNextRow
 	-> success
 		row : data.TableRow
 	-> noresult
+	
+sib getWordOfTheDay : info.scce.dime.app.game.Native#getWordOfTheDay
+	-> success
+		word : text

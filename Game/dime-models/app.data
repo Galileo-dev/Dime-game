@@ -138,4 +138,13 @@ Data _tH3fEMwMEeWZVvvwxpYu8A {
   		isList false
   	}
   }
+  
+  ConcreteType _qEgC0XJdEe2iUurqwrsMLA at 540,470 size 140,55 {
+  	name "WordOfTheDay"
+  	PrimitiveAttribute _qMv_4XJdEe2iUurqwrsMLA at 5,32 size 130,18 {
+  		dataType Text
+  		name "value"
+  		isList false
+  	}
+  }
 }
