@@ -58,7 +58,7 @@ Process _Py7SoW_PEe2xPKxOfn4Ofw {
   		libraryComponentUID "_IcPdIG_IEe2xPKxOfn4Ofw"
   		isList false
   		name "row"
-  		-ComplexUpdate-> _SP_eEW_nEe2xPKxOfn4Ofw via (278,114) (277,153) decorate "" at (0,0) {
+  		-ComplexUpdate-> _SP_eEW_nEe2xPKxOfn4Ofw via (277,114) (277,153) decorate "" at (0,0) {
   			id _TG4p0W_nEe2xPKxOfn4Ofw
   			dfViewWorkaround true
   		}
@@ -105,7 +105,7 @@ Process _Py7SoW_PEe2xPKxOfn4Ofw {
   		libraryComponentUID "_lWXXkWZbEe2X7s_wBoiCCg"
   		isList false
   		name "row"
-  		-ComplexDirectDataFlow-> _-FT4AW_nEe2xPKxOfn4Ofw via (346,466) (346,594) decorate "" at (0,0) {
+  		-ComplexDirectDataFlow-> _-FT4AW_nEe2xPKxOfn4Ofw via (296,465) (296,594) decorate "" at (0,0) {
   			id _Da_jQW_oEe2xPKxOfn4Ofw
   			dfViewWorkaround true
   		}
@@ -116,17 +116,18 @@ Process _Py7SoW_PEe2xPKxOfn4Ofw {
   	}
   }
   
-  SetAttributeValueSIB _-FGcoW_nEe2xPKxOfn4Ofw at 356,500 size 120,108 {
+  SetAttributeValueSIB _-FGcoW_nEe2xPKxOfn4Ofw at 306,500 size 235,108 {
   	libraryComponentUID "_N50gIW_IEe2xPKxOfn4Ofw"
+  	name "Set CurrentRow TableRow"
   	label "Set tableRow"
   	ignoredBranch [  ]
-  	ComplexInputPort _-FPmkW_nEe2xPKxOfn4Ofw at 5,67 size 110,18 {
+  	ComplexInputPort _-FPmkW_nEe2xPKxOfn4Ofw at 5,67 size 225,18 {
   		libraryComponentUID "_IcPdIG_IEe2xPKxOfn4Ofw"
   		isList false
   		name "currentrow"
   	}
   	
-  	ComplexInputPort _-FT4AW_nEe2xPKxOfn4Ofw at 5,85 size 110,18 {
+  	ComplexInputPort _-FT4AW_nEe2xPKxOfn4Ofw at 5,85 size 225,18 {
   		libraryComponentUID "_lWXXkWZbEe2X7s_wBoiCCg"
   		isList false
   		name "tablerow"
@@ -147,9 +148,13 @@ Process _Py7SoW_PEe2xPKxOfn4Ofw {
   
   Branch _pILZ8W_rEe2xPKxOfn4Ofw at 540,440 size 120,25 {
   	name "noresult"
-  	-ControlFlow-> _Py-V8W_PEe2xPKxOfn4Ofw via (600,772) decorate "" at (0,0) {
-  		id _qZyLwW_rEe2xPKxOfn4Ofw
+  	-ControlFlow-> _seuskXStEe2qnsODk6AEwg  decorate "" at (0,0) {
+  		id _t-B8IXStEe2qnsODk6AEwg
   		concurrent true
   	}
+  }
+  
+  EndSIB _seuskXStEe2qnsODk6AEwg at 650,750 size 100,65 {
+  	branchName "loser"
   }
 }

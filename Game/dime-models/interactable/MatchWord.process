@@ -4,24 +4,8 @@ Process _HqeXQW_vEe2xPKxOfn4Ofw {
   dataFlowView true
   processType Basic
   isStateful false
-  DataContext _Hqe-UW_vEe2xPKxOfn4Ofw at 20,-50 size 210,180 {
+  DataContext _Hqe-UW_vEe2xPKxOfn4Ofw at 20,-50 size 210,111 {
   	dfViewWorkaround true
-  	ComplexVariable _FpvrEXJfEe2iUurqwrsMLA at 10,99 size 190,51 {
-  		expanded true
-  		libraryComponentUID "_qEgC0XJdEe2iUurqwrsMLA"
-  		name "wordoftheday"
-  		dfViewWorkaround true
-  		isList false
-  		PrimitiveAttribute _GJLZEHJfEe2iUurqwrsMLA at 10,23 size 170,25 {
-  			libraryComponentUID "_qMv_4XJdEe2iUurqwrsMLA"
-  			dfViewWorkaround true
-  			-PrimitiveRead-> _EKEBAXJfEe2iUurqwrsMLA via (247,84) (248,314) decorate "" at (0,0) {
-  				id _GpdboHJfEe2iUurqwrsMLA
-  				dfViewWorkaround true
-  			}
-  		}
-  	}
-  	
   	ComplexVariable _CeG4sXJjEe2iUurqwrsMLA at 10,30 size 190,51 {
   		expanded true
   		libraryComponentUID "_IcPdIG_IEe2xPKxOfn4Ofw"
@@ -31,8 +15,13 @@ Process _HqeXQW_vEe2xPKxOfn4Ofw {
   		ComplexAttribute _CngFQXJjEe2iUurqwrsMLA at 10,23 size 170,25 {
   			libraryComponentUID "_N50gIW_IEe2xPKxOfn4Ofw"
   			dfViewWorkaround true
-  			-ComplexRead-> _EJ96YXJfEe2iUurqwrsMLA  decorate "" at (0,0) {
+  			-ComplexRead-> _EJ96YXJfEe2iUurqwrsMLA via (125,296) decorate "" at (0,0) {
   				id _Dtfc8XJjEe2iUurqwrsMLA
+  				dfViewWorkaround true
+  			}
+  			
+  			-ComplexRead-> _UHVq8XStEe2qnsODk6AEwg via (125,487) decorate "" at (0,0) {
+  				id _YB5cAXStEe2qnsODk6AEwg
   				dfViewWorkaround true
   			}
   		}
@@ -55,7 +44,7 @@ Process _HqeXQW_vEe2xPKxOfn4Ofw {
   	}
   }
   
-  EndSIB _HqgzgW_vEe2xPKxOfn4Ofw at 290,450 size 100,65 {
+  EndSIB _HqgzgW_vEe2xPKxOfn4Ofw at 290,610 size 100,65 {
   	branchName "success"
   }
   
@@ -80,8 +69,13 @@ Process _HqeXQW_vEe2xPKxOfn4Ofw {
   		libraryComponentUID "_qEgC0XJdEe2iUurqwrsMLA"
   		isList false
   		name "retrieved"
-  		-ComplexUpdate-> _FpvrEXJfEe2iUurqwrsMLA via (253,176) (252,74) decorate "" at (0,0) {
-  			id _GCY0kXJfEe2iUurqwrsMLA
+  		-ComplexDirectDataFlow-> _ph4vsXSnEe2qnsODk6AEwg via (270,176) (270,314) decorate "" at (0,0) {
+  			id _qg25YXSnEe2qnsODk6AEwg
+  			dfViewWorkaround true
+  		}
+  		
+  		-ComplexDirectDataFlow-> _UHpM8XStEe2qnsODk6AEwg via (270,176) (270,504) decorate "" at (0,0) {
+  			id _Z-4GEXStEe2qnsODk6AEwg
   			dfViewWorkaround true
   		}
   	}
@@ -109,10 +103,10 @@ Process _HqeXQW_vEe2xPKxOfn4Ofw {
   		name "row"
   	}
   	
-  	PrimitiveInputPort _EKEBAXJfEe2iUurqwrsMLA at 5,85 size 110,18 {
-  		dataType Text
+  	ComplexInputPort _ph4vsXSnEe2qnsODk6AEwg at 5,85 size 110,18 {
+  		libraryComponentUID "_qEgC0XJdEe2iUurqwrsMLA"
   		isList false
-  		name "word"
+  		name "wordOfTheDay"
   	}
   	-BranchConnector-> _EKIScXJfEe2iUurqwrsMLA   {
   		id _EKI5gXJfEe2iUurqwrsMLA
@@ -122,8 +116,54 @@ Process _HqeXQW_vEe2xPKxOfn4Ofw {
   
   Branch _EKIScXJfEe2iUurqwrsMLA at 280,360 size 120,25 {
   	name "success"
+  	-ControlFlow-> _UHQycXStEe2qnsODk6AEwg  decorate "" at (0,0) {
+  		id _UylAUXStEe2qnsODk6AEwg
+  		concurrent true
+  	}
+  }
+  
+  EndSIB _K9ifwXSrEe2qnsODk6AEwg at 440,360 size 100,65 {
+  	branchName "winner"
+  }
+  
+  AtomicSIB _UHQycXStEe2qnsODk6AEwg at 280,410 size 120,108 {
+  	libraryComponentUID "app.game.hasWon"
+  	label "hasWon"
+  	ignoredBranch [  ]
+  	ComplexInputPort _UHVq8XStEe2qnsODk6AEwg at 5,67 size 110,18 {
+  		libraryComponentUID "_lWXXkWZbEe2X7s_wBoiCCg"
+  		isList false
+  		name "row"
+  	}
+  	
+  	ComplexInputPort _UHpM8XStEe2qnsODk6AEwg at 5,85 size 110,18 {
+  		libraryComponentUID "_qEgC0XJdEe2iUurqwrsMLA"
+  		isList false
+  		name "wordOfTheDay"
+  	}
+  	-BranchConnector-> _UH8u8XStEe2qnsODk6AEwg   {
+  		id _UIBncXStEe2qnsODk6AEwg
+  		concurrent true
+  	}
+  	
+  	-BranchConnector-> _UILYcXStEe2qnsODk6AEwg   {
+  		id _UILYc3StEe2qnsODk6AEwg
+  		concurrent true
+  	}
+  }
+  
+  Branch _UH8u8XStEe2qnsODk6AEwg at 430,451 size 120,25 {
+  	name "true"
+  	-ControlFlow-> _K9ifwXSrEe2qnsODk6AEwg  decorate "" at (0,0) {
+  		id _WokRkXStEe2qnsODk6AEwg
+  		concurrent true
+  	}
+  }
+  
+  Branch _UILYcXStEe2qnsODk6AEwg at 280,550 size 120,25 {
+  	name "false"
   	-ControlFlow-> _HqgzgW_vEe2xPKxOfn4Ofw  decorate "" at (0,0) {
-  		id _E8-EoXJfEe2iUurqwrsMLA
+  		id _VuTowXStEe2qnsODk6AEwg
   		concurrent true
   	}
   }

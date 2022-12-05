@@ -24,9 +24,15 @@ sib setRow : info.scce.dime.app.game.Native#setRow
 
 sib matchRow : info.scce.dime.app.game.Native#matchRow
 	row: data.TableRow
-	word: text
+	wordOfTheDay: data.WordOfTheDay
 	-> success
-	
+
+sib hasWon : info.scce.dime.app.game.Native#hasWon
+	row: data.TableRow
+	wordOfTheDay: data.WordOfTheDay
+	-> true
+	-> false	
+
 sib getNextRow : info.scce.dime.app.game.Native#getNextRow
 	currentRow: data.TableRow
 	rowList: [data.TableRow]

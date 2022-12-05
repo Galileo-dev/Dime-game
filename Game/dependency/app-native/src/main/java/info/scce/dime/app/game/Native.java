@@ -14,6 +14,7 @@ import de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Table;
 import de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.TableRow;
 import de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.TableEntry;
 import de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.Validation;
+import de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.WordOfTheDay;
 
 import javax.inject.Inject;
 import javax.enterprise.context.ApplicationScoped;
@@ -23,8 +24,11 @@ import java.util.stream.Collectors;
 import static java.lang.System.exit;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 /**
  * Collection of static methods for native SIBs
@@ -102,32 +106,79 @@ public class Native {
 		return isInList(index, tableRows) ? tableRows.get(index) : null;
 	}
 
-	public static void matchRow(TableRow row, String word) {
-		for (TableEntry entry : row.gettableEntry_TableEntry()) {
-			entry.setvalidation(Validation.fullMatch);
+	public static void matchRow(TableRow row, WordOfTheDay wordOfTheDay) {
+		List<TableEntry> tableEntrys = row.gettableEntry_TableEntry();
+		String word = wordOfTheDay.getvalue();
+		for (int i = 0; i < tableEntrys.size(); i++) {
+			// char entry = tableEntrys.get(i).getvalue().charAt(0);
+			String entry = tableEntrys.get(i).getvalue();
+			// char wordChar = word.charAt(i);
+
+			Validation match;
+
+			//wordle logic 
+
+			// if word contains entry	
+
+			if (word.contains(entry)) {
+				if (entry.charAt(0) == word.charAt(i)) {
+					match = Validation.fullMatch;
+				} else {
+					System.out.print(entry.charAt(0) + "!=" + word.charAt(i));
+					match = Validation.letterMatch;
+				}
+			} else {
+				match = Validation.noMatch;
+			}
+
+			tableEntrys.get(i).setvalidation(match);
 		}
 	}
+
+	public static boolean hasWon(TableRow row, WordOfTheDay wordOfTheDay) {
+		List<TableEntry> tableEntrys = row.gettableEntry_TableEntry();
+		String word = wordOfTheDay.getvalue();
+		// convert list of tableEntrys to a string
+		String tableEntryString = tableEntrys.stream().map(TableEntry::getvalue).collect(Collectors.joining());
+		return tableEntryString.equals(word);
+	}
+
 
 	public static String getWordOfTheDay() throws IOException {
 		// wordle get word of the day
 		// list of 5 letter words
 		ArrayList<String> words = new ArrayList<String>();
 
-		BufferedReader bf = new BufferedReader(new FileReader("words"));
+		// BufferedReader bf = new BufferedReader(new FileReader("/words"));
 
+		// String line = bf.readLine();
+
+		// while (line != null) {
+		// 	words.add(line);
+		// 	line = bf.readLine();
+		// }
+
+		// bf.close();
+
+		InputStream inputStream = Native.class.getResourceAsStream("/words.txt");
+		
+		BufferedReader bf = new BufferedReader(new InputStreamReader(inputStream));
+		// read the file line by line into an array
 		String line = bf.readLine();
-
 		while (line != null) {
 			words.add(line);
 			line = bf.readLine();
 		}
-
 		bf.close();
 
+
+		// get random word
 		Random rand = new Random();
 		int randomIndex = rand.nextInt(words.size());
-		System.out.println(words.get(randomIndex));
-		return words.get(randomIndex);
+		String word = words.get(randomIndex);
+
+		System.out.println("word of the day is " + word);
+		return word;
 	}
 
 }
