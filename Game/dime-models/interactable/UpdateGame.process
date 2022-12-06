@@ -20,7 +20,7 @@ Process _mEFokG_EEe2xPKxOfn4Ofw {
   				dfViewWorkaround true
   			}
   		}
-  		-ComplexRead-> _dH_2UG_PEe2xPKxOfn4Ofw via (125,1064) decorate "" at (0,0) {
+  		-ComplexRead-> _dH_2UG_PEe2xPKxOfn4Ofw via (125,904) decorate "" at (0,0) {
   			id _g_2kwW_nEe2xPKxOfn4Ofw
   			dfViewWorkaround true
   		}
@@ -48,7 +48,7 @@ Process _mEFokG_EEe2xPKxOfn4Ofw {
   	}
   }
   
-  EndSIB _mETrA2_EEe2xPKxOfn4Ofw at 330,1230 size 100,65 {
+  EndSIB _mETrA2_EEe2xPKxOfn4Ofw at 330,1070 size 100,65 {
   	branchName "success"
   }
   
@@ -73,7 +73,7 @@ Process _mEFokG_EEe2xPKxOfn4Ofw {
   		libraryComponentUID "_gahvsWZbEe2X7s_wBoiCCg"
   		isList false
   		name "retrieved"
-  		-ComplexDirectDataFlow-> _dIRjIW_PEe2xPKxOfn4Ofw via (165,256) (165,1046) decorate "" at (0,0) {
+  		-ComplexDirectDataFlow-> _dIRjIW_PEe2xPKxOfn4Ofw via (165,256) (165,886) decorate "" at (0,0) {
   			id _lFuh4W_PEe2xPKxOfn4Ofw
   			dfViewWorkaround true
   		}
@@ -165,17 +165,17 @@ Process _mEFokG_EEe2xPKxOfn4Ofw {
   	}
   }
   
-  ProcessSIB _SMkDgW_PEe2xPKxOfn4Ofw at 240,970 size 280,108 {
+  ProcessSIB _SMkDgW_PEe2xPKxOfn4Ofw at 265,810 size 230,108 {
   	libraryComponentUID "_Py7SoW_PEe2xPKxOfn4Ofw"
   	label "changeCurrentRow"
   	ignoredBranch [  ]
-  	ComplexInputPort _dIRjIW_PEe2xPKxOfn4Ofw at 5,67 size 270,18 {
+  	ComplexInputPort _dIRjIW_PEe2xPKxOfn4Ofw at 5,67 size 220,18 {
   		libraryComponentUID "_gahvsWZbEe2X7s_wBoiCCg"
   		isList false
   		name "table"
   	}
   	
-  	ComplexInputPort _dH_2UG_PEe2xPKxOfn4Ofw at 5,85 size 270,18 {
+  	ComplexInputPort _dH_2UG_PEe2xPKxOfn4Ofw at 5,85 size 220,18 {
   		libraryComponentUID "_IcPdIG_IEe2xPKxOfn4Ofw"
   		isList false
   		name "row"
@@ -184,9 +184,14 @@ Process _mEFokG_EEe2xPKxOfn4Ofw {
   		id _SMt0gW_PEe2xPKxOfn4Ofw
   		concurrent true
   	}
+  	
+  	-BranchConnector-> _lV590XSvEe2qnsODk6AEwg   {
+  		id _lV5903SvEe2qnsODk6AEwg
+  		concurrent true
+  	}
   }
   
-  Branch _SMsmYW_PEe2xPKxOfn4Ofw at 320,1177 size 120,25 {
+  Branch _SMsmYW_PEe2xPKxOfn4Ofw at 320,1017 size 120,25 {
   	name "success"
   	-ControlFlow-> _mETrA2_EEe2xPKxOfn4Ofw  decorate "" at (0,0) {
   		id _tZFyIXSkEe2qnsODk6AEwg
@@ -208,8 +213,8 @@ Process _mEFokG_EEe2xPKxOfn4Ofw {
   		concurrent true
   	}
   	
-  	-BranchConnector-> _EYYUMXSsEe2qnsODk6AEwg   {
-  		id _EYYUM3SsEe2qnsODk6AEwg
+  	-BranchConnector-> _dsDF8XSuEe2qnsODk6AEwg   {
+  		id _dsDF83SuEe2qnsODk6AEwg
   		concurrent true
   	}
   }
@@ -222,15 +227,27 @@ Process _mEFokG_EEe2xPKxOfn4Ofw {
   	}
   }
   
-  EndSIB _CkntAHSrEe2qnsODk6AEwg at 600,1230 size 100,65 {
+  EndSIB _CkntAHSrEe2qnsODk6AEwg at 489,650 size 100,65 {
   	branchName "winner"
   }
   
-  Branch _EYYUMXSsEe2qnsODk6AEwg at 519,760 size 120,25 {
-  	name "winner"
+  Branch _dsDF8XSuEe2qnsODk6AEwg at 479,760 size 120,25 {
+  	name "Word Match"
   	-ControlFlow-> _CkntAHSrEe2qnsODk6AEwg  decorate "" at (0,0) {
-  		id _FTLvkXSsEe2qnsODk6AEwg
+  		id _eOqDwXSuEe2qnsODk6AEwg
   		concurrent true
   	}
+  }
+  
+  Branch _lV590XSvEe2qnsODk6AEwg at 520,851 size 120,25 {
+  	name "no next row"
+  	-ControlFlow-> _miXw8XSvEe2qnsODk6AEwg  decorate "" at (0,0) {
+  		id _oZGCAXSvEe2qnsODk6AEwg
+  		concurrent true
+  	}
+  }
+  
+  EndSIB _miXw8XSvEe2qnsODk6AEwg at 720,831 size 100,65 {
+  	branchName "loser"
   }
 }

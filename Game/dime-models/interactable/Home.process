@@ -67,6 +67,11 @@ Process _LWgagF-SEeakMeYoloYxpg {
   		id _V3X6oXSsEe2qnsODk6AEwg
   		concurrent true
   	}
+  	
+  	-BranchConnector-> _wIsyAXSvEe2qnsODk6AEwg   {
+  		id _wIsyA3SvEe2qnsODk6AEwg
+  		concurrent true
+  	}
   }
   
   Branch _muWIsW_TEe2xPKxOfn4Ofw at 200,240 size 120,25 {
@@ -102,6 +107,14 @@ Process _LWgagF-SEeakMeYoloYxpg {
   	name "winner"
   	-ControlFlow-> _-xUtUGUQEea0lrrxwspd7g via (30,432) (30,182) decorate "" at (0,0) {
   		id _XgX4wXSsEe2qnsODk6AEwg
+  		concurrent true
+  	}
+  }
+  
+  Branch _wIsyAXSvEe2qnsODk6AEwg at 40,460 size 120,25 {
+  	name "loser"
+  	-ControlFlow-> _-xUtUGUQEea0lrrxwspd7g via (30,472) (30,182) decorate "" at (0,0) {
+  		id _w2RCoXSvEe2qnsODk6AEwg
   		concurrent true
   	}
   }

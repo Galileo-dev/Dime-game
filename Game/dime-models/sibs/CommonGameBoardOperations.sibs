@@ -5,12 +5,7 @@ package app.game
 
 import "dime-models/app.data" as data
 
-sib SayHello : info.scce.dime.app.game.Native#sayHello
-  name : text
-  -> success
-  
- 
-sib CreateGameBoard : info.scce.dime.app.game.Native#createGameBoardWordle
+sib createGameBoard : info.scce.dime.app.game.Native#createGameBoardWordle
     width : integer
     height: integer
     -> success
