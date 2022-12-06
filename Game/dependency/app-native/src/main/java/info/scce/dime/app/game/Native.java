@@ -21,14 +21,13 @@ import javax.enterprise.context.ApplicationScoped;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static java.lang.System.exit;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 /**
  * Collection of static methods for native SIBs
@@ -63,11 +62,11 @@ public class Native {
 		Table table = getBean(TableController.class).create(null);
 
 		List<TableRow> tableRowList = new ArrayList<TableRow>();
-		for (int x = 0; x < width; x++) {
+		for (int x = 0; x < height; x++) {
 			TableRow tableRow = getBean(TableRowController.class).create(null);
 			System.out.println("inside for loop x =" + x);
 			List<TableEntry> tableEntryList = new ArrayList<TableEntry>();
-			for (int y = 0; y < height; y++) {
+			for (int y = 0; y < width; y++) {
 
 				System.out.println("inside nested for loop y =" + y);
 				TableEntry tableEntry = getBean(TableEntryController.class).create(null);
@@ -106,20 +105,47 @@ public class Native {
 		return isInList(index, tableRows) ? tableRows.get(index) : null;
 	}
 
+	public static boolean isWordValid(String word) throws IOException{
+		// ArrayList<String> words = new ArrayList<String>();
+
+		// InputStream inputStream = Native.class.getResourceAsStream("/words.txt");
+		
+		// BufferedReader bf = new BufferedReader(new InputStreamReader(inputStream));
+		// // read the file line by line into an array
+		// String line = bf.readLine();
+		// while (line != null) {
+		// 	words.add(line);
+		// 	line = bf.readLine();
+		// }
+		// bf.close();
+
+		if (word.length() < 5) {
+			return false;
+		}
+
+
+		
+		InputStream inputStream = Native.class.getResourceAsStream("/words.txt");
+
+		String[] words = new BufferedReader(new InputStreamReader(inputStream))
+			.lines()
+			.toArray(String[]::new);
+			
+		
+		return Arrays.asList(words).contains(word);
+		
+		// check if the word is in the array as fast as possible
+		
+		
+	}
+
 	public static void matchRow(TableRow row, WordOfTheDay wordOfTheDay) {
 		List<TableEntry> tableEntrys = row.gettableEntry_TableEntry();
 		String word = wordOfTheDay.getvalue();
 		for (int i = 0; i < tableEntrys.size(); i++) {
-			// char entry = tableEntrys.get(i).getvalue().charAt(0);
 			String entry = tableEntrys.get(i).getvalue();
-			// char wordChar = word.charAt(i);
 
 			Validation match;
-
-			//wordle logic 
-
-			// if word contains entry	
-
 			if (word.contains(entry)) {
 				if (entry.charAt(0) == word.charAt(i)) {
 					match = Validation.fullMatch;
@@ -145,20 +171,7 @@ public class Native {
 
 
 	public static String getWordOfTheDay() throws IOException {
-		// wordle get word of the day
-		// list of 5 letter words
 		ArrayList<String> words = new ArrayList<String>();
-
-		// BufferedReader bf = new BufferedReader(new FileReader("/words"));
-
-		// String line = bf.readLine();
-
-		// while (line != null) {
-		// 	words.add(line);
-		// 	line = bf.readLine();
-		// }
-
-		// bf.close();
 
 		InputStream inputStream = Native.class.getResourceAsStream("/words.txt");
 		

@@ -21,6 +21,11 @@ sib matchRow : info.scce.dime.app.game.Native#matchRow
 	row: data.TableRow
 	wordOfTheDay: data.WordOfTheDay
 	-> success
+	
+sib isWordValid : info.scce.dime.app.game.Native#isWordValid
+	word: text
+	-> success
+		result: boolean
 
 sib hasWon : info.scce.dime.app.game.Native#hasWon
 	row: data.TableRow
