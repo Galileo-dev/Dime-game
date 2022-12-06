@@ -63,6 +63,15 @@ Process _LWgagF-SEeakMeYoloYxpg {
   	libraryComponentUID "_j3BMEWZYEe2X7s_wBoiCCg"
   	label "Game"
   	ignoredBranch [  ]
+  	-BranchConnector-> _V3TCIXSsEe2qnsODk6AEwg   {
+  		id _V3X6oXSsEe2qnsODk6AEwg
+  		concurrent true
+  	}
+  	
+  	-BranchConnector-> _wIsyAXSvEe2qnsODk6AEwg   {
+  		id _wIsyA3SvEe2qnsODk6AEwg
+  		concurrent true
+  	}
   }
   
   Branch _muWIsW_TEe2xPKxOfn4Ofw at 200,240 size 120,25 {
@@ -90,6 +99,22 @@ Process _LWgagF-SEeakMeYoloYxpg {
   	name "Play"
   	-ControlFlow-> _pJ4M0WZYEe2X7s_wBoiCCg via (178,421) (178,353) decorate "" at (0,0) {
   		id _B9dlYW_UEe2xPKxOfn4Ofw
+  		concurrent true
+  	}
+  }
+  
+  Branch _V3TCIXSsEe2qnsODk6AEwg at 40,420 size 120,25 {
+  	name "winner"
+  	-ControlFlow-> _-xUtUGUQEea0lrrxwspd7g via (30,432) (30,182) decorate "" at (0,0) {
+  		id _XgX4wXSsEe2qnsODk6AEwg
+  		concurrent true
+  	}
+  }
+  
+  Branch _wIsyAXSvEe2qnsODk6AEwg at 40,460 size 120,25 {
+  	name "loser"
+  	-ControlFlow-> _-xUtUGUQEea0lrrxwspd7g via (30,472) (30,182) decorate "" at (0,0) {
+  		id _w2RCoXSvEe2qnsODk6AEwg
   		concurrent true
   	}
   }
