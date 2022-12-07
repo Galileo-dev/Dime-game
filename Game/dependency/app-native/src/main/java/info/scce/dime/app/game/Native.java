@@ -106,25 +106,11 @@ public class Native {
 	}
 
 	public static boolean isWordValid(String word) throws IOException{
-		// ArrayList<String> words = new ArrayList<String>();
-
-		// InputStream inputStream = Native.class.getResourceAsStream("/words.txt");
-		
-		// BufferedReader bf = new BufferedReader(new InputStreamReader(inputStream));
-		// // read the file line by line into an array
-		// String line = bf.readLine();
-		// while (line != null) {
-		// 	words.add(line);
-		// 	line = bf.readLine();
-		// }
-		// bf.close();
 
 		if (word.length() < 5) {
 			return false;
 		}
 
-
-		
 		InputStream inputStream = Native.class.getResourceAsStream("/words.txt");
 
 		String[] words = new BufferedReader(new InputStreamReader(inputStream))
@@ -173,7 +159,7 @@ public class Native {
 	public static String getWordOfTheDay() throws IOException {
 		ArrayList<String> words = new ArrayList<String>();
 
-		InputStream inputStream = Native.class.getResourceAsStream("/words.txt");
+		InputStream inputStream = Native.class.getResourceAsStream("/wordle.txt");
 		
 		BufferedReader bf = new BufferedReader(new InputStreamReader(inputStream));
 		// read the file line by line into an array

@@ -146,7 +146,7 @@ GUI _oKdnAWf0Ee2cveXnmwOj_g {
   	}
   }
   
-  Template _oKgDQWf0Ee2cveXnmwOj_g at 240,6 size 240,460 {
+  Template _oKgDQWf0Ee2cveXnmwOj_g at 240,9 size 520,370 {
   	blockName ""
   	disableAutoLayout false
   	generalStyle GeneralStyling _oKgqUGf0Ee2cveXnmwOj_g {
@@ -155,141 +155,195 @@ GUI _oKdnAWf0Ee2cveXnmwOj_g {
   			attributes [  ]
   			marginTop None
   		}
-  	Row _tFicIW6SEe2xPKxOfn4Ofw at 10,30 size 200,200 {
-  		generalStyle GeneralStyling _tF6PkG6SEe2xPKxOfn4Ofw {
-  				tallness Fitting
+  	Row _iEhdoXVUEe2qnsODk6AEwg at 10,30 size 500,310 {
+  		generalStyle GeneralStyling _iEqnkHVUEe2qnsODk6AEwg {
+  				tallness Full
   				marginBottom None
   				attributes [  ]
   				marginTop None
   			}
-  		MoveUp _tFnUoW6SEe2xPKxOfn4Ofw at 2,2 size 14,7 {
+  		MoveUp _iEhdo3VUEe2qnsODk6AEwg at 2,2 size 14,7 {
   		}
   		
-  		MoveDown _tFnUo26SEe2xPKxOfn4Ofw at 2,10 size 14,7 {
+  		MoveDown _iEhdpXVUEe2qnsODk6AEwg at 2,10 size 14,7 {
   		}
   		
-  		Col _2WIn8XC6Ee2Asu6OZgCjMA at 10,30 size 170,150 {
-  			wideness Full
-  			layout Layout _2WSY8HC6Ee2Asu6OZgCjMA {
+  		Col _iEhdp3VUEe2qnsODk6AEwg at 10,30 size 220,260 {
+  			wideness Half
+  			layout Layout _iEhdrXVUEe2qnsODk6AEwg {
   					size Default
   					offset None
   					alignment Left
   				}
-  			generalStyle GeneralStyling _2WIn9nC6Ee2Asu6OZgCjMA {
+  			generalStyle GeneralStyling _iEhdrHVUEe2qnsODk6AEwg {
   					tallness Fitting
   					marginBottom None
   					attributes [  ]
   					marginTop None
-  					rawContent "width: 50px;\nheight: 50px;"
   				}
-  			MoveLeft _2WIn83C6Ee2Asu6OZgCjMA at 2,2 size 7,14 {
+  			MoveLeft _iEhdqXVUEe2qnsODk6AEwg at 2,2 size 7,14 {
   			}
   			
-  			MoveRight _2WIn9XC6Ee2Asu6OZgCjMA at 10,2 size 7,14 {
+  			MoveRight _iEhdq3VUEe2qnsODk6AEwg at 10,2 size 7,14 {
   			}
   			
-  			GUISIB _bhcMQXFQEe2Asu6OZgCjMA at 10,30 size 150,90 {
-  				libraryComponentUID "_Fo7dUXFPEe2Asu6OZgCjMA"
-  				label "TableEntry"
-  				generalStyle GeneralStyling _OBd1kHFPEe2Asu6OZgCjMA {
+  			Row _tFicIW6SEe2xPKxOfn4Ofw at 10,30 size 200,200 {
+  				generalStyle GeneralStyling _tF6PkG6SEe2xPKxOfn4Ofw {
   						tallness Fitting
   						marginBottom None
   						attributes [  ]
   						marginTop None
   					}
-  				ComplexInputPort _bhqOsXFQEe2Asu6OZgCjMA at 5,67 size 90,18 {
-  					libraryComponentUID "_pPCSQWZbEe2X7s_wBoiCCg"
-  					isList false
-  					name "current"
+  				MoveUp _tFnUoW6SEe2xPKxOfn4Ofw at 2,2 size 14,7 {
   				}
   				
-  				MoveUp _bh3qEXFQEe2Asu6OZgCjMA at 2,2 size 14,7 {
+  				MoveDown _tFnUo26SEe2xPKxOfn4Ofw at 2,10 size 14,7 {
   				}
   				
-  				MoveDown _bh4RIXFQEe2Asu6OZgCjMA at 2,10 size 14,7 {
+  				Col _2WIn8XC6Ee2Asu6OZgCjMA at 10,30 size 170,150 {
+  					wideness Full
+  					layout Layout _2WSY8HC6Ee2Asu6OZgCjMA {
+  							size Default
+  							offset None
+  							alignment Left
+  						}
+  					generalStyle GeneralStyling _2WIn9nC6Ee2Asu6OZgCjMA {
+  							tallness Fitting
+  							marginBottom None
+  							attributes [  ]
+  							marginTop None
+  							rawContent "width: 50px;\nheight: 50px;"
+  						}
+  					MoveLeft _2WIn83C6Ee2Asu6OZgCjMA at 2,2 size 7,14 {
+  					}
+  					
+  					MoveRight _2WIn9XC6Ee2Asu6OZgCjMA at 10,2 size 7,14 {
+  					}
+  					
+  					GUISIB _bhcMQXFQEe2Asu6OZgCjMA at 10,30 size 150,90 {
+  						libraryComponentUID "_Fo7dUXFPEe2Asu6OZgCjMA"
+  						label "TableEntry"
+  						generalStyle GeneralStyling _OBd1kHFPEe2Asu6OZgCjMA {
+  								tallness Fitting
+  								marginBottom None
+  								attributes [  ]
+  								marginTop None
+  							}
+  						ComplexInputPort _bhqOsXFQEe2Asu6OZgCjMA at 5,67 size 90,18 {
+  							libraryComponentUID "_pPCSQWZbEe2X7s_wBoiCCg"
+  							isList false
+  							name "current"
+  						}
+  						
+  						MoveUp _bh3qEXFQEe2Asu6OZgCjMA at 2,2 size 14,7 {
+  						}
+  						
+  						MoveDown _bh4RIXFQEe2Asu6OZgCjMA at 2,10 size 14,7 {
+  						}
+  					}
   				}
   			}
   		}
-  	}
-  	
-  	Form _MfzA4G_CEe2xPKxOfn4Ofw at 10,240 size 220,190 {
-  		inline false
-  		generalStyle GeneralStyling _MhIdoW_CEe2xPKxOfn4Ofw {
-  				tallness Fitting
-  				marginBottom None
-  				attributes [  ]
-  				marginTop None
-  			}
-  		MoveUp _Mf8x4W_CEe2xPKxOfn4Ofw at 2,2 size 14,7 {
-  		}
   		
-  		MoveDown _Mf8x42_CEe2xPKxOfn4Ofw at 2,10 size 14,7 {
-  		}
-  		
-  		Button _MgF70W_CEe2xPKxOfn4Ofw at 10,100 size 200,60 {
-  			label "Submit"
-  			styling ButtonStyling _Mg_TsG_CEe2xPKxOfn4Ofw {
-  					fullWidth false
+  		Col _jr_KsXVUEe2qnsODk6AEwg at 240,30 size 240,250 {
+  			wideness Half
+  			layout Layout _jsA_4XVUEe2qnsODk6AEwg {
   					size Default
-  					disabled false
-  					color Default
+  					offset None
+  					alignment Left
   				}
-  			options ButtonOptions _MhIdoG_CEe2xPKxOfn4Ofw {
-  					isLink false
-  					submitsForm true
-  				}
-  			disabled false
-  			icon Icon _MgsYxW_CEe2xPKxOfn4Ofw {
-  					postIcon None
-  					preIcon None
-  				}
-  			generalStyle GeneralStyling _MgsYxG_CEe2xPKxOfn4Ofw {
+  			generalStyle GeneralStyling _jsA_4HVUEe2qnsODk6AEwg {
   					tallness Fitting
   					marginBottom None
   					attributes [  ]
   					marginTop None
   				}
-  			MoveUp _MgsYwW_CEe2xPKxOfn4Ofw at 2,2 size 14,7 {
+  			MoveLeft _jr_xwXVUEe2qnsODk6AEwg at 2,2 size 7,14 {
   			}
   			
-  			MoveDown _MgsYw2_CEe2xPKxOfn4Ofw at 2,10 size 14,7 {
+  			MoveRight _jr_xw3VUEe2qnsODk6AEwg at 10,2 size 7,14 {
   			}
-  		}
-  		
-  		Field _NzdoMG_CEe2xPKxOfn4Ofw at 10,30 size 200,60 {
-  			maxMB 0
-  			inputType Text
-  			label "Word"
-  			accept ""
-  			styling FormFieldStyling _N0zE8G_CEe2xPKxOfn4Ofw {
-  					size Default
+  			
+  			Form _MfzA4G_CEe2xPKxOfn4Ofw at 10,30 size 220,190 {
+  				inline false
+  				generalStyle GeneralStyling _MhIdoW_CEe2xPKxOfn4Ofw {
+  						tallness Fitting
+  						marginBottom None
+  						attributes [  ]
+  						marginTop None
+  					}
+  				MoveUp _Mf8x4W_CEe2xPKxOfn4Ofw at 2,2 size 14,7 {
+  				}
+  				
+  				MoveDown _Mf8x42_CEe2xPKxOfn4Ofw at 2,10 size 14,7 {
+  				}
+  				
+  				Button _MgF70W_CEe2xPKxOfn4Ofw at 10,100 size 200,60 {
+  					label "Submit"
+  					styling ButtonStyling _Mg_TsG_CEe2xPKxOfn4Ofw {
+  							fullWidth false
+  							size Default
+  							disabled false
+  							color Default
+  						}
+  					options ButtonOptions _MhIdoG_CEe2xPKxOfn4Ofw {
+  							isLink false
+  							submitsForm true
+  						}
   					disabled false
-  					color Default
+  					icon Icon _MgsYxW_CEe2xPKxOfn4Ofw {
+  							postIcon None
+  							preIcon None
+  						}
+  					generalStyle GeneralStyling _MgsYxG_CEe2xPKxOfn4Ofw {
+  							tallness Fitting
+  							marginBottom None
+  							attributes [  ]
+  							marginTop None
+  						}
+  					MoveUp _MgsYwW_CEe2xPKxOfn4Ofw at 2,2 size 14,7 {
+  					}
+  					
+  					MoveDown _MgsYw2_CEe2xPKxOfn4Ofw at 2,10 size 14,7 {
+  					}
   				}
-  			additionalOptions FormFieldAdditionalOptions _N0p7AG_CEe2xPKxOfn4Ofw {
-  					emptyValue "a 5 letter word"
-  					readonly false
+  				
+  				Field _NzdoMG_CEe2xPKxOfn4Ofw at 10,30 size 200,60 {
+  					maxMB 0
+  					inputType Text
+  					label "Word"
+  					accept ""
+  					styling FormFieldStyling _N0zE8G_CEe2xPKxOfn4Ofw {
+  							size Medium
+  							disabled false
+  							color Default
+  						}
+  					additionalOptions FormFieldAdditionalOptions _N0p7AG_CEe2xPKxOfn4Ofw {
+  							emptyValue "a 5 letter word"
+  							readonly false
+  						}
+  					validation FormFieldValidation _N0WZAG_CEe2xPKxOfn4Ofw {
+  							min 0
+  							max 5
+  							required false
+  						}
+  					disabled false
+  					icon Icon _N0NPE2_CEe2xPKxOfn4Ofw {
+  							postIcon None
+  							preIcon None
+  						}
+  					generalStyle GeneralStyling _N0NPEm_CEe2xPKxOfn4Ofw {
+  							tallness Fitting
+  							marginBottom None
+  							attributes [  ]
+  							marginTop None
+  						}
+  					MoveUp _N0DeEW_CEe2xPKxOfn4Ofw at 2,2 size 14,7 {
+  					}
+  					
+  					MoveDown _N0NPEW_CEe2xPKxOfn4Ofw at 2,10 size 14,7 {
+  					}
   				}
-  			validation FormFieldValidation _N0WZAG_CEe2xPKxOfn4Ofw {
-  					min 0
-  					max 5
-  					required false
-  				}
-  			disabled false
-  			icon Icon _N0NPE2_CEe2xPKxOfn4Ofw {
-  					postIcon None
-  					preIcon None
-  				}
-  			generalStyle GeneralStyling _N0NPEm_CEe2xPKxOfn4Ofw {
-  					tallness Fitting
-  					marginBottom None
-  					attributes [  ]
-  					marginTop None
-  				}
-  			MoveUp _N0DeEW_CEe2xPKxOfn4Ofw at 2,2 size 14,7 {
-  			}
-  			
-  			MoveDown _N0NPEW_CEe2xPKxOfn4Ofw at 2,10 size 14,7 {
   			}
   		}
   	}
