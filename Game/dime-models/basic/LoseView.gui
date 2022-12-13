@@ -1,0 +1,54 @@
+GUI _F7pn8XbUEe2LdatHW9da6Q {
+  fullWidth false
+  disableAutoLayout false
+  additionalJavaScript [  ]
+  additionalStylesheets [  ]
+  title "LoseView"
+  DataContext _F7q2EXbUEe2LdatHW9da6Q at 10,10 size 180,130 {
+  	dfViewWorkaround true
+  }
+  
+  Template _F7rdIXbUEe2LdatHW9da6Q at 240,10 size 150,190 {
+  	blockName ""
+  	disableAutoLayout false
+  	generalStyle GeneralStyling _F7sEMHbUEe2LdatHW9da6Q {
+  			tallness Fitting
+  			marginBottom None
+  			attributes [  ]
+  			marginTop None
+  		}
+  	Row _F7sEMnbUEe2LdatHW9da6Q at 10,30 size 130,130 {
+  		generalStyle GeneralStyling _F7vHgXbUEe2LdatHW9da6Q {
+  				tallness Fitting
+  				marginBottom None
+  				attributes [  ]
+  				marginTop None
+  			}
+  		MoveUp _F7srQXbUEe2LdatHW9da6Q at 2,2 size 14,7 {
+  		}
+  		
+  		MoveDown _F7srQ3bUEe2LdatHW9da6Q at 2,10 size 14,7 {
+  		}
+  		
+  		Col _F7tSUXbUEe2LdatHW9da6Q at 10,30 size 100,80 {
+  			wideness Full
+  			layout Layout _F7vHgHbUEe2LdatHW9da6Q {
+  					size Default
+  					offset None
+  					alignment Left
+  				}
+  			generalStyle GeneralStyling _F7ugcHbUEe2LdatHW9da6Q {
+  					tallness Fitting
+  					marginBottom None
+  					attributes [  ]
+  					marginTop None
+  				}
+  			MoveLeft _F7t5YXbUEe2LdatHW9da6Q at 2,2 size 7,14 {
+  			}
+  			
+  			MoveRight _F7t5Y3bUEe2LdatHW9da6Q at 10,2 size 7,14 {
+  			}
+  		}
+  	}
+  }
+}

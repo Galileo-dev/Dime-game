@@ -1,0 +1,130 @@
+GUI _EkDi4XbUEe2LdatHW9da6Q {
+  fullWidth false
+  disableAutoLayout false
+  additionalJavaScript [  ]
+  additionalStylesheets [  ]
+  title "WinView"
+  DataContext _EkF_IXbUEe2LdatHW9da6Q at 10,10 size 180,105 {
+  	dfViewWorkaround true
+  	PrimitiveVariable _ekmbEXrvEe2CxfYUKS3ndA at 20,50 size 140,25 {
+  		dataType Boolean
+  		isInput true
+  		name "hasWon"
+  		dfViewWorkaround true
+  		isList false
+  		-IF-> _mS7YsXrvEe2CxfYUKS3ndA  decorate "" at (0,0) decorate "Text" at (0,0) {
+  			id _pWGOwXrvEe2CxfYUKS3ndA
+  			negate false
+  		}
+  		
+  		-IF-> _kZ72wXrvEe2CxfYUKS3ndA  decorate "" at (0,0) decorate "Text" at (0,0) {
+  			id _pv1kcXrvEe2CxfYUKS3ndA
+  			negate true
+  		}
+  	}
+  }
+  
+  Template _EkHNQXbUEe2LdatHW9da6Q at 240,10 size 270,300 {
+  	blockName ""
+  	disableAutoLayout false
+  	generalStyle GeneralStyling _EkH0UHbUEe2LdatHW9da6Q {
+  			tallness Fitting
+  			marginBottom None
+  			attributes [  ]
+  			marginTop None
+  		}
+  	Row _EkJCcXbUEe2LdatHW9da6Q at 10,30 size 250,240 {
+  		generalStyle GeneralStyling _EkMFwHbUEe2LdatHW9da6Q {
+  				tallness Fitting
+  				marginBottom None
+  				attributes [  ]
+  				marginTop None
+  			}
+  		MoveUp _EkJCc3bUEe2LdatHW9da6Q at 2,2 size 14,7 {
+  		}
+  		
+  		MoveDown _EkJCdXbUEe2LdatHW9da6Q at 2,10 size 14,7 {
+  		}
+  		
+  		Col _EkKQkXbUEe2LdatHW9da6Q at 10,30 size 220,190 {
+  			wideness Full
+  			layout Layout _EkLesXbUEe2LdatHW9da6Q {
+  					size Default
+  					offset None
+  					alignment Left
+  				}
+  			generalStyle GeneralStyling _EkLesHbUEe2LdatHW9da6Q {
+  					tallness Fitting
+  					marginBottom None
+  					attributes [  ]
+  					marginTop None
+  				}
+  			MoveLeft _EkKQk3bUEe2LdatHW9da6Q at 2,2 size 7,14 {
+  			}
+  			
+  			MoveRight _EkK3oXbUEe2LdatHW9da6Q at 10,2 size 7,14 {
+  			}
+  			
+  			Text _kZ72wXrvEe2CxfYUKS3ndA at 10,100 size 200,60 {
+  				content [ StaticContent _kZ72x3rvEe2CxfYUKS3ndA {
+  						renderMarkdown false
+  						maxChars 0
+  						html false
+  						rawContent "You Lost :(\n"
+  						styling TextStyling _kZ72yHrvEe2CxfYUKS3ndA {
+  								small false
+  								highlight false
+  								deleted false
+  								underline false
+  								bold false
+  								alignment Left
+  								italic false
+  								color Default
+  							}
+  					} ]
+  				generalStyle GeneralStyling _kZ72xnrvEe2CxfYUKS3ndA {
+  						tallness Fitting
+  						marginBottom None
+  						attributes [  ]
+  						marginTop None
+  					}
+  				MoveUp _kZ72w3rvEe2CxfYUKS3ndA at 2,2 size 14,7 {
+  				}
+  				
+  				MoveDown _kZ72xXrvEe2CxfYUKS3ndA at 2,10 size 14,7 {
+  				}
+  			}
+  			
+  			Text _mS7YsXrvEe2CxfYUKS3ndA at 10,30 size 200,60 {
+  				content [ StaticContent _mS7Yt3rvEe2CxfYUKS3ndA {
+  						renderMarkdown false
+  						maxChars 0
+  						html false
+  						rawContent "You Won!"
+  						styling TextStyling _mS7YuHrvEe2CxfYUKS3ndA {
+  								small false
+  								highlight false
+  								deleted false
+  								underline false
+  								bold false
+  								alignment Left
+  								italic false
+  								color Default
+  							}
+  					} ]
+  				generalStyle GeneralStyling _mS7YtnrvEe2CxfYUKS3ndA {
+  						tallness Fitting
+  						marginBottom None
+  						attributes [  ]
+  						marginTop None
+  					}
+  				MoveUp _mS7Ys3rvEe2CxfYUKS3ndA at 2,2 size 14,7 {
+  				}
+  				
+  				MoveDown _mS7YtXrvEe2CxfYUKS3ndA at 2,10 size 14,7 {
+  				}
+  			}
+  		}
+  	}
+  }
+}

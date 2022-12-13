@@ -17,21 +17,21 @@ GUI _Fo7dUXFPEe2Asu6OZgCjMA {
   		ComplexAttribute _YBDrMXFPEe2Asu6OZgCjMA at 10,23 size 140,25 {
   			libraryComponentUID "_FTkbAW_TEe2xPKxOfn4Ofw"
   			isLive false
-  			-IS-> _KJe3oXFPEe2Asu6OZgCjMA  decorate "" at (0,0) decorate "Text" at (0,0) {
+  			-IS-> _KJe3oXFPEe2Asu6OZgCjMA via (100,210) (370,210) decorate "" at (0,0) decorate "Text" at (0,0) {
   				id _aL5LEXFPEe2Asu6OZgCjMA
   				exactMatch false
   				negate false
   				matchingType "_oPUBoG_SEe2xPKxOfn4Ofw"
   			}
   			
-  			-IS-> _KJfel3FPEe2Asu6OZgCjMA  decorate "" at (0,0) decorate "Text" at (0,0) {
+  			-IS-> _KJfel3FPEe2Asu6OZgCjMA via (100,250) (600,250) decorate "" at (0,0) decorate "Text" at (0,0) {
   				id _anErMXFPEe2Asu6OZgCjMA
   				exactMatch false
   				negate false
   				matchingType "_3dUc4W_SEe2xPKxOfn4Ofw"
   			}
   			
-  			-IS-> _KJfev3FPEe2Asu6OZgCjMA  decorate "" at (0,0) decorate "Text" at (0,0) {
+  			-IS-> _KJfev3FPEe2Asu6OZgCjMA via (100,290) (830,290) decorate "" at (0,0) decorate "Text" at (0,0) {
   				id _bkNB0XFPEe2Asu6OZgCjMA
   				exactMatch false
   				negate false
@@ -80,7 +80,7 @@ GUI _Fo7dUXFPEe2Asu6OZgCjMA {
   					marginBottom None
   					attributes [  ]
   					marginTop None
-  					rawContent "width: 50px;\nheight: 50px;\nborder: 5px solid black;\nbackground-color: green;"
+  					rawContent "width: 50px;\nheight: 50px;\nborder: 5px solid #D3D6DA;\nbackground-color: green;"
   				}
   			MoveLeft _KJfegHFPEe2Asu6OZgCjMA at 2,2 size 7,14 {
   			}
@@ -132,7 +132,7 @@ GUI _Fo7dUXFPEe2Asu6OZgCjMA {
   					marginBottom Double
   					attributes [  ]
   					marginTop None
-  					rawContent "width: 50px;\nheight: 50px;\nborder: 5px solid black;"
+  					rawContent "width: 50px;\nheight: 50px;\nborder: 5px solid #D3D6DA;"
   				}
   			MoveLeft _KJfeqHFPEe2Asu6OZgCjMA at 2,2 size 7,14 {
   			}
@@ -184,7 +184,7 @@ GUI _Fo7dUXFPEe2Asu6OZgCjMA {
   					marginBottom None
   					attributes [  ]
   					marginTop None
-  					rawContent "width: 50px;\nheight: 50px;\nborder: 5px solid black;\nbackground-color: yellow;"
+  					rawContent "width: 50px;\nheight: 50px;\nborder: 5px solid #D3D6DA;\nbackground-color: #C9B458;"
   				}
   			MoveLeft _KJfe0HFPEe2Asu6OZgCjMA at 2,2 size 7,14 {
   			}

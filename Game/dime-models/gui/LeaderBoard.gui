@@ -1,0 +1,54 @@
+GUI _bOoy8HZcEe2qnsODk6AEwg {
+  fullWidth false
+  disableAutoLayout false
+  additionalJavaScript [  ]
+  additionalStylesheets [  ]
+  title "LeaderBoard"
+  DataContext _bO4DgXZcEe2qnsODk6AEwg at 10,10 size 180,130 {
+  	dfViewWorkaround true
+  }
+  
+  Template _bO4Dg3ZcEe2qnsODk6AEwg at 240,10 size 150,190 {
+  	blockName ""
+  	disableAutoLayout false
+  	generalStyle GeneralStyling _bPBNcHZcEe2qnsODk6AEwg {
+  			tallness Fitting
+  			marginBottom None
+  			attributes [  ]
+  			marginTop None
+  		}
+  	Row _bPK-cXZcEe2qnsODk6AEwg at 10,30 size 130,130 {
+  		generalStyle GeneralStyling _bPK-fnZcEe2qnsODk6AEwg {
+  				tallness Fitting
+  				marginBottom None
+  				attributes [  ]
+  				marginTop None
+  			}
+  		MoveUp _bPK-c3ZcEe2qnsODk6AEwg at 2,2 size 14,7 {
+  		}
+  		
+  		MoveDown _bPK-dXZcEe2qnsODk6AEwg at 2,10 size 14,7 {
+  		}
+  		
+  		Col _bPK-d3ZcEe2qnsODk6AEwg at 10,30 size 100,80 {
+  			wideness Full
+  			layout Layout _bPK-fXZcEe2qnsODk6AEwg {
+  					size Default
+  					offset None
+  					alignment Left
+  				}
+  			generalStyle GeneralStyling _bPK-fHZcEe2qnsODk6AEwg {
+  					tallness Fitting
+  					marginBottom None
+  					attributes [  ]
+  					marginTop None
+  				}
+  			MoveLeft _bPK-eXZcEe2qnsODk6AEwg at 2,2 size 7,14 {
+  			}
+  			
+  			MoveRight _bPK-e3ZcEe2qnsODk6AEwg at 10,2 size 7,14 {
+  			}
+  		}
+  	}
+  }
+}
