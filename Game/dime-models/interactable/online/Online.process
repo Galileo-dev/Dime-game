@@ -1,0 +1,70 @@
+Process _Ge4CUXY7Ee2qnsODk6AEwg {
+  modelName "online"
+  description "online"
+  dataFlowView true
+  processType Basic
+  isStateful false
+  DataContext _GfEPkXY7Ee2qnsODk6AEwg at 20,20 size 210,80 {
+  	dfViewWorkaround true
+  }
+  
+  StartSIB _GfKWMXY7Ee2qnsODk6AEwg at 330,20 size 100,65 {
+  	-ControlFlow-> _K6NlMXY7Ee2qnsODk6AEwg  decorate "" at (0,0) {
+  		id _KxlAEXZbEe2qnsODk6AEwg
+  		concurrent true
+  	}
+  }
+  
+  EndSIB _GfKWM3Y7Ee2qnsODk6AEwg at 340,600 size 100,65 {
+  	branchName "success"
+  }
+  
+  ProcessSIB _K6NlMXY7Ee2qnsODk6AEwg at 320,250 size 120,65 {
+  	libraryComponentUID "_j3BMEWZYEe2X7s_wBoiCCg"
+  	label "GameOnline"
+  	ignoredBranch [  ]
+  	-BranchConnector-> _K6SdsXY7Ee2qnsODk6AEwg   {
+  		id _K6Tr0XY7Ee2qnsODk6AEwg
+  		concurrent true
+  	}
+  	
+  	-BranchConnector-> _K6Tr03Y7Ee2qnsODk6AEwg   {
+  		id _K6Tr1XY7Ee2qnsODk6AEwg
+  		concurrent true
+  	}
+  }
+  
+  Branch _K6SdsXY7Ee2qnsODk6AEwg at 201,357 size 120,25 {
+  	name "winner"
+  	-ControlFlow-> _Q93wwXY7Ee2qnsODk6AEwg  decorate "" at (0,0) {
+  		id _SfzdkXY7Ee2qnsODk6AEwg
+  		concurrent true
+  	}
+  }
+  
+  Branch _K6Tr03Y7Ee2qnsODk6AEwg at 470,357 size 120,25 {
+  	name "loser"
+  	-ControlFlow-> _Q93wwXY7Ee2qnsODk6AEwg  decorate "" at (0,0) {
+  		id _SChEoXY7Ee2qnsODk6AEwg
+  		concurrent true
+  	}
+  }
+  
+  ProcessSIB _Q93wwXY7Ee2qnsODk6AEwg at 330,420 size 120,65 {
+  	libraryComponentUID "_aYlNIXY6Ee2qnsODk6AEwg"
+  	label "Leaderboard"
+  	ignoredBranch [  ]
+  	-BranchConnector-> _Q97bIXY7Ee2qnsODk6AEwg   {
+  		id _Q97bI3Y7Ee2qnsODk6AEwg
+  		concurrent true
+  	}
+  }
+  
+  Branch _Q97bIXY7Ee2qnsODk6AEwg at 330,530 size 120,25 {
+  	name "success"
+  	-ControlFlow-> _GfKWM3Y7Ee2qnsODk6AEwg  decorate "" at (0,0) {
+  		id _Tv3-UXY7Ee2qnsODk6AEwg
+  		concurrent true
+  	}
+  }
+}

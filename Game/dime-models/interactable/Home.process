@@ -28,7 +28,7 @@ Process _LWgagF-SEeakMeYoloYxpg {
   		concurrent true
   	}
   	
-  	-BranchConnector-> _muWIsW_TEe2xPKxOfn4Ofw   {
+  	-BranchConnector-> _muWIsW_TEe2xPKxOfn4Ofw via (100,230) (260,225)  {
   		id _muZMAW_TEe2xPKxOfn4Ofw
   		concurrent true
   	}
@@ -97,8 +97,8 @@ Process _LWgagF-SEeakMeYoloYxpg {
   
   Branch _BWIfoW_UEe2xPKxOfn4Ofw at 200,410 size 120,25 {
   	name "Play"
-  	-ControlFlow-> _pJ4M0WZYEe2X7s_wBoiCCg via (178,421) (178,353) decorate "" at (0,0) {
-  		id _B9dlYW_UEe2xPKxOfn4Ofw
+  	-ControlFlow-> __Bz-YXY7Ee2qnsODk6AEwg  decorate "" at (0,0) {
+  		id _BTJu4HY8Ee2qnsODk6AEwg
   		concurrent true
   	}
   }
@@ -115,6 +115,24 @@ Process _LWgagF-SEeakMeYoloYxpg {
   	name "loser"
   	-ControlFlow-> _-xUtUGUQEea0lrrxwspd7g via (30,472) (30,182) decorate "" at (0,0) {
   		id _w2RCoXSvEe2qnsODk6AEwg
+  		concurrent true
+  	}
+  }
+  
+  ProcessSIB __Bz-YXY7Ee2qnsODk6AEwg at 200,480 size 120,65 {
+  	libraryComponentUID "_Ge4CUXY7Ee2qnsODk6AEwg"
+  	label "online"
+  	ignoredBranch [  ]
+  	-BranchConnector-> __B3owXY7Ee2qnsODk6AEwg   {
+  		id __B424XY7Ee2qnsODk6AEwg
+  		concurrent true
+  	}
+  }
+  
+  Branch __B3owXY7Ee2qnsODk6AEwg at 200,580 size 120,25 {
+  	name "success"
+  	-ControlFlow-> _-xUtUGUQEea0lrrxwspd7g via (175,592) (175,182) decorate "" at (0,0) {
+  		id _B7uKwXY8Ee2qnsODk6AEwg
   		concurrent true
   	}
   }
