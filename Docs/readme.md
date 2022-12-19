@@ -1,28 +1,15 @@
-
-
 # DIME Game
-This is a project made for CS4431 of LM173 ISE at the University of Limerick.
----
+This project was created for CS4431 of LM173 ISE at the University of Limerick by team members Fionn Barrett and David Laffey.
 ### Team Members:
 ***Fionn Barrett, David Laffey***
 
-## Contents
+## Objective
+The goal of this project is to develop a game using [DIME](https://gitlab.com/scce/dime), a software platform for creating interactive multimedia applications. We have chosen to create a version of the popular word guessing game, [Wordle](https://www.nytimes.com/games/wordle/index.html).
 
-the objective of this project is to create a game using [DIME](https://gitlab.com/scce/dime). we choose to implement [Wordle](https://www.nytimes.com/games/wordle/index.html).
-Our Dime game require a 5 by 6 box which allowed the user to input six letter words with 6 attempts. The grid must turn green for the letters which match with the answer and yellow with the letters which are somewhere else in the word. There also needs to be a random word generator which would change the answer word every time.
+## Game Description
+In Wordle, the objective is to correctly guess the "word of the day" within a limited number of tries. The game consists of a 5 by 6 grid, in which the player can input six letter words. The grid will highlight letters in green if they are correctly placed in the answer word, and yellow if they are present in the answer word but not in the correct position. There is also a random word generator which will change the answer word each time the game is played.
 
-
-
-## Description
-
-
-this is a well known game where the user must guess the "word of the day" with the following rules
-- the user gets a limited amount of tries
-- the user inputs a word. the word must be a word inside a word list even if its not the "word of the day"
-- the correct letters entered which are in the right place get highlighted
-
-
-
+To play the game, the player must input a word using the provided grid. The inputted word must be a valid word according to a pre-determined word list, even if it is not the "word of the day". The correct letters that are correctly placed in the answer word will be highlighted in green, while letters that are present in the answer word but not in the correct position will be highlighted in yellow. The player has a limited number of tries to correctly guess the "word of the day".
 
 
 
