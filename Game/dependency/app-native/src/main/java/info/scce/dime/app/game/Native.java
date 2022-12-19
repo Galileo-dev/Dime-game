@@ -21,7 +21,6 @@ import javax.enterprise.context.ApplicationScoped;
 import java.util.*;
 import java.util.stream.Collectors;
 
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -101,11 +100,12 @@ public class Native {
 
 	public static TableRow getNextRow(TableRow tableRow, List<TableRow> tableRows) {
 		int index = tableRows.indexOf(tableRow) + 1;
-
+		// print error
+		System.err.println("index: " + index + " isInList = " + isInList(index, tableRows));
 		return isInList(index, tableRows) ? tableRows.get(index) : null;
 	}
 
-	public static boolean isWordValid(String word) throws IOException{
+	public static boolean isWordValid(String word) throws IOException {
 
 		if (word.length() < 5) {
 			return false;
@@ -114,15 +114,13 @@ public class Native {
 		InputStream inputStream = Native.class.getResourceAsStream("/words.txt");
 
 		String[] words = new BufferedReader(new InputStreamReader(inputStream))
-			.lines()
-			.toArray(String[]::new);
-			
-		
+				.lines()
+				.toArray(String[]::new);
+
 		return Arrays.asList(words).contains(word);
-		
+
 		// check if the word is in the array as fast as possible
-		
-		
+
 	}
 
 	public static void matchRow(TableRow row, WordOfTheDay wordOfTheDay) {
@@ -155,12 +153,11 @@ public class Native {
 		return tableEntryString.equals(word);
 	}
 
-
 	public static String getWordOfTheDay() throws IOException {
 		ArrayList<String> words = new ArrayList<String>();
 
 		InputStream inputStream = Native.class.getResourceAsStream("/wordle.txt");
-		
+
 		BufferedReader bf = new BufferedReader(new InputStreamReader(inputStream));
 		// read the file line by line into an array
 		String line = bf.readLine();
@@ -169,7 +166,6 @@ public class Native {
 			line = bf.readLine();
 		}
 		bf.close();
-
 
 		// get random word
 		Random rand = new Random();
