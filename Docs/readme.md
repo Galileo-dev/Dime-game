@@ -1,5 +1,5 @@
 # DIME Game
-This project was created for CS4431 of LM173 ISE at the University of Limerick by team members Fionn Barrett and David Laffey.
+This project was created for CS4431 of LM173 ISE at the University of Limerick.
 ### Team Members:
 ***Fionn Barrett, David Laffey***
 
