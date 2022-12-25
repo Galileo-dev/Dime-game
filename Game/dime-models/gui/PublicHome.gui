@@ -8,10 +8,10 @@ GUI _LmrS0Ej8EeaK4_MRcoLfnw {
   	dfViewWorkaround true
   }
   
-  Template _Lm3gEEj8EeaK4_MRcoLfnw at 270,30 size 390,420 {
+  Template _Lm3gEEj8EeaK4_MRcoLfnw at 270,30 size 390,490 {
   	blockName "body"
   	disableAutoLayout false
-  	Jumbotron _6CcloEmAEeaUSpYQeYyxnQ at 10,30 size 370,360 {
+  	Jumbotron _6CcloEmAEeaUSpYQeYyxnQ at 10,30 size 370,430 {
   		generalStyle GeneralStyling _hH5ScTD2EemwX93gZgy7kw {
   				tallness Full
   				marginBottom None
@@ -24,7 +24,7 @@ GUI _LmrS0Ej8EeaK4_MRcoLfnw {
   		MoveDown _6ClvkEmAEeaUSpYQeYyxnQ at 2,10 size 14,7 {
   		}
   		
-  		Row _pqsksE_OEeauEZ95mLTQ7g at 10,30 size 350,300 {
+  		Row _pqsksE_OEeauEZ95mLTQ7g at 10,30 size 350,370 {
   			generalStyle GeneralStyling _hH5SczD2EemwX93gZgy7kw {
   					tallness Full
   					marginBottom None
@@ -37,7 +37,7 @@ GUI _LmrS0Ej8EeaK4_MRcoLfnw {
   			MoveDown _pq7OME_OEeauEZ95mLTQ7g at 2,10 size 14,7 {
   			}
   			
-  			Col _prJ3sE_OEeauEZ95mLTQ7g at 10,30 size 320,250 {
+  			Col _prJ3sE_OEeauEZ95mLTQ7g at 10,30 size 320,320 {
   				wideness Full
   				layout Layout _hH55gTD2EemwX93gZgy7kw {
   						size Default
@@ -136,6 +136,37 @@ GUI _LmrS0Ej8EeaK4_MRcoLfnw {
   					}
   					
   					MoveDown _vCOVs2ZXEe2X7s_wBoiCCg at 2,10 size 14,7 {
+  					}
+  				}
+  				
+  				Button _dIH1UW_TEe2xPKxOfn4Ofw at 10,230 size 200,60 {
+  					displayLabel "Online Wordle Dime"
+  					label "Online"
+  					styling ButtonStyling _dIH1WG_TEe2xPKxOfn4Ofw {
+  							fullWidth false
+  							size Default
+  							disabled false
+  							color Red
+  						}
+  					options ButtonOptions _dIH1WW_TEe2xPKxOfn4Ofw {
+  							isLink false
+  							submitsForm true
+  						}
+  					disabled false
+  					icon Icon _dIH1V2_TEe2xPKxOfn4Ofw {
+  							postIcon None
+  							preIcon None
+  						}
+  					generalStyle GeneralStyling _dIH1Vm_TEe2xPKxOfn4Ofw {
+  							tallness Fitting
+  							marginBottom None
+  							attributes [  ]
+  							marginTop None
+  						}
+  					MoveUp _dIH1W2_TEe2xPKxOfn4Ofw at 2,2 size 14,7 {
+  					}
+  					
+  					MoveDown _dIIcYG_TEe2xPKxOfn4Ofw at 2,10 size 14,7 {
   					}
   				}
   			}

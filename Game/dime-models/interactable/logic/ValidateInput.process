@@ -1,0 +1,106 @@
+Process _y3RgAW_sEe2xPKxOfn4Ofw {
+  modelName "ValidateInput"
+  description "ValidateInput"
+  dataFlowView true
+  processType Basic
+  isStateful false
+  DataContext _y3SHEW_sEe2xPKxOfn4Ofw at 20,0 size 210,625 {
+  	dfViewWorkaround true
+  }
+  
+  StartSIB _y3TVMW_sEe2xPKxOfn4Ofw at 330,20 size 100,90 {
+  	PrimitiveOutputPort _5gWs0W_sEe2xPKxOfn4Ofw at 5,67 size 90,18 {
+  		dataType Text
+  		isList false
+  		name "word"
+  		-PrimitiveDirectDataFlow-> _ON8Y8XVNEe2qnsODk6AEwg via (310,96) (310,226) decorate "" at (0,0) {
+  			id _Pg848XVNEe2qnsODk6AEwg
+  			dfViewWorkaround true
+  		}
+  	}
+  	-ControlFlow-> _ON4ukXVNEe2qnsODk6AEwg  decorate "" at (0,0) {
+  		id _PMNYAHVNEe2qnsODk6AEwg
+  		concurrent true
+  	}
+  }
+  
+  EndSIB _JjI2sXVNEe2qnsODk6AEwg at 310,550 size 100,65 {
+  	branchName "valid"
+  }
+  
+  EndSIB _J14zkXVNEe2qnsODk6AEwg at 520,560 size 100,65 {
+  	branchName "notValid"
+  }
+  
+  AtomicSIB _ON4ukXVNEe2qnsODk6AEwg at 320,150 size 120,90 {
+  	libraryComponentUID "app.game.isWordValid"
+  	label "isWordValid"
+  	ignoredBranch [  ]
+  	PrimitiveInputPort _ON8Y8XVNEe2qnsODk6AEwg at 5,67 size 110,18 {
+  		dataType Text
+  		isList false
+  		name "word"
+  	}
+  	-BranchConnector-> _ON8Y83VNEe2qnsODk6AEwg   {
+  		id _OOGJ8XVNEe2qnsODk6AEwg
+  		concurrent true
+  	}
+  }
+  
+  Branch _ON8Y83VNEe2qnsODk6AEwg at 330,270 size 120,50 {
+  	name "success"
+  	PrimitiveOutputPort _OOGJ83VNEe2qnsODk6AEwg at 5,27 size 110,18 {
+  		dataType Boolean
+  		isList false
+  		name "result"
+  		-PrimitiveDirectDataFlow-> _XcZsk3VNEe2qnsODk6AEwg via (320,306) (320,417) decorate "" at (0,0) {
+  			id _YoH40XVNEe2qnsODk6AEwg
+  			dfViewWorkaround true
+  		}
+  	}
+  	-ControlFlow-> _XcZskXVNEe2qnsODk6AEwg  decorate "" at (0,0) {
+  		id _YEXEcHVNEe2qnsODk6AEwg
+  		concurrent true
+  	}
+  }
+  
+  AtomicSIB _XcZskXVNEe2qnsODk6AEwg at 335,330 size 120,90 {
+  	libraryComponentUID "common.BooleanSwitch"
+  	label "BooleanSwitch"
+  	ignoredBranch [  ]
+  	PrimitiveInputPort _XcZsk3VNEe2qnsODk6AEwg at 5,67 size 110,18 {
+  		dataType Boolean
+  		isList false
+  		name "value"
+  	}
+  	-BranchConnector-> _XcjdkXVNEe2qnsODk6AEwg   {
+  		id _Xcjdk3VNEe2qnsODk6AEwg
+  		concurrent true
+  	}
+  	
+  	-BranchConnector-> _XcqLQXVNEe2qnsODk6AEwg   {
+  		id _XcqLQ3VNEe2qnsODk6AEwg
+  		concurrent true
+  	}
+  }
+  
+  Branch _XcjdkXVNEe2qnsODk6AEwg at 310,450 size 120,25 {
+  	name "true"
+  	-ControlFlow-> _JjI2sXVNEe2qnsODk6AEwg  decorate "" at (0,0) {
+  		id _aTLscHVNEe2qnsODk6AEwg
+  		concurrent true
+  	}
+  }
+  
+  Branch _XcqLQXVNEe2qnsODk6AEwg at 470,440 size 120,25 {
+  	name "false"
+  	-ControlFlow-> _J14zkXVNEe2qnsODk6AEwg  decorate "" at (0,0) {
+  		id _Zv8cgXVNEe2qnsODk6AEwg
+  		concurrent true
+  	}
+  }
+  
+  Documentation _1jxJEXZbEe2qnsODk6AEwg at 480,340 size 521,51 {
+  	content "This is nessasary as the success branch seems to handle excepetion types since im reading from the io"
+  }
+}

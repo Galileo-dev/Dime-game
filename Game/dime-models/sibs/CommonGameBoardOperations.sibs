@@ -5,14 +5,41 @@ package app.game
 
 import "dime-models/app.data" as data
 
-sib SayHello : info.scce.dime.app.game.Native#sayHello
-  name : text
-  -> success
-  
-
-sib CreateGameBoard : info.scce.dime.app.game.Native#createGameBoardWordle
+sib createGameBoard : info.scce.dime.app.game.Native#createGameBoardWordle
     width : integer
     height: integer
     -> success
         Table : data.Table
         
+sib setRow : info.scce.dime.app.game.Native#setRow
+	row: data.TableRow
+	word: text
+	-> success
+	
+
+sib matchRow : info.scce.dime.app.game.Native#matchRow
+	row: data.TableRow
+	wordOfTheDay: data.WordOfTheDay
+	-> success
+	
+sib isWordValid : info.scce.dime.app.game.Native#isWordValid
+	word: text
+	-> success
+		result: boolean
+
+sib hasWon : info.scce.dime.app.game.Native#hasWon
+	row: data.TableRow
+	wordOfTheDay: data.WordOfTheDay
+	-> true
+	-> false	
+
+sib getNextRow : info.scce.dime.app.game.Native#getNextRow
+	currentRow: data.TableRow
+	rowList: [data.TableRow]
+	-> success
+		row : data.TableRow
+	-> noresult
+	
+sib getWordOfTheDay : info.scce.dime.app.game.Native#getWordOfTheDay
+	-> success
+		word : text

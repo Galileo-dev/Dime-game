@@ -1,0 +1,228 @@
+GUI _Fo7dUXFPEe2Asu6OZgCjMA {
+  fullWidth false
+  disableAutoLayout false
+  additionalJavaScript [  ]
+  additionalStylesheets [  ]
+  title "TableEntry"
+  DataContext _Fo-goXFPEe2Asu6OZgCjMA at 10,10 size 180,168 {
+  	dfViewWorkaround true
+  	ComplexVariable _RQt_0XFPEe2Asu6OZgCjMA at 10,60 size 160,78 {
+  		expanded true
+  		isLive false
+  		libraryComponentUID "_pPCSQWZbEe2X7s_wBoiCCg"
+  		isInput true
+  		name "current"
+  		dfViewWorkaround true
+  		isList false
+  		ComplexAttribute _YBDrMXFPEe2Asu6OZgCjMA at 10,23 size 140,25 {
+  			libraryComponentUID "_FTkbAW_TEe2xPKxOfn4Ofw"
+  			isLive false
+  			-IS-> _KJe3oXFPEe2Asu6OZgCjMA via (100,210) (370,210) decorate "" at (0,0) decorate "Text" at (0,0) {
+  				id _aL5LEXFPEe2Asu6OZgCjMA
+  				exactMatch false
+  				negate false
+  				matchingType "_oPUBoG_SEe2xPKxOfn4Ofw"
+  			}
+  			
+  			-IS-> _KJfel3FPEe2Asu6OZgCjMA via (100,250) (600,250) decorate "" at (0,0) decorate "Text" at (0,0) {
+  				id _anErMXFPEe2Asu6OZgCjMA
+  				exactMatch false
+  				negate false
+  				matchingType "_3dUc4W_SEe2xPKxOfn4Ofw"
+  			}
+  			
+  			-IS-> _KJfev3FPEe2Asu6OZgCjMA via (100,290) (830,290) decorate "" at (0,0) decorate "Text" at (0,0) {
+  				id _bkNB0XFPEe2Asu6OZgCjMA
+  				exactMatch false
+  				negate false
+  				matchingType "_2_DMgW_SEe2xPKxOfn4Ofw"
+  			}
+  		}
+  		
+  		PrimitiveAttribute _YBH8oXFPEe2Asu6OZgCjMA at 10,50 size 140,25 {
+  			libraryComponentUID "_1rhoIWZbEe2X7s_wBoiCCg"
+  			isLive false
+  		}
+  	}
+  }
+  
+  Template _Fo_HsXFPEe2Asu6OZgCjMA at 240,10 size 730,230 {
+  	blockName ""
+  	disableAutoLayout false
+  	generalStyle GeneralStyling _FpAV0HFPEe2Asu6OZgCjMA {
+  			tallness Fitting
+  			marginBottom None
+  			attributes [  ]
+  			marginTop None
+  		}
+  	Row _KJe3YXFPEe2Asu6OZgCjMA at 10,30 size 710,170 {
+  		generalStyle GeneralStyling _KJe3mXFPEe2Asu6OZgCjMA {
+  				tallness Fitting
+  				marginBottom None
+  				attributes [  ]
+  				marginTop None
+  			}
+  		MoveUp _KJe3m3FPEe2Asu6OZgCjMA at 2,2 size 14,7 {
+  		}
+  		
+  		MoveDown _KJe3nnFPEe2Asu6OZgCjMA at 2,10 size 14,7 {
+  		}
+  		
+  		Col _KJe3oXFPEe2Asu6OZgCjMA at 10,30 size 220,120 {
+  			wideness Twelfth
+  			layout Layout _KJfefnFPEe2Asu6OZgCjMA {
+  					size Default
+  					offset None
+  					alignment Left
+  				}
+  			generalStyle GeneralStyling _KJfefXFPEe2Asu6OZgCjMA {
+  					tallness Fitting
+  					marginBottom None
+  					attributes [  ]
+  					marginTop None
+  					rawContent "width: 50px;\nheight: 50px;\nborder: 5px solid #D3D6DA;\nbackground-color: green;"
+  				}
+  			MoveLeft _KJfegHFPEe2Asu6OZgCjMA at 2,2 size 7,14 {
+  			}
+  			
+  			MoveRight _KJfeg3FPEe2Asu6OZgCjMA at 10,2 size 7,14 {
+  			}
+  			
+  			Text _KJfehnFPEe2Asu6OZgCjMA at 10,30 size 200,60 {
+  				content [ StaticContent _KJfejHFPEe2Asu6OZgCjMA {
+  						renderMarkdown false
+  						maxChars 0
+  						html false
+  						rawContent "{{current.value}}"
+  						styling TextStyling _KJfejXFPEe2Asu6OZgCjMA {
+  								small false
+  								highlight false
+  								deleted false
+  								underline false
+  								bold false
+  								alignment Left
+  								italic false
+  								color Default
+  							}
+  					} ]
+  				generalStyle GeneralStyling _KJfei3FPEe2Asu6OZgCjMA {
+  						tallness Fitting
+  						marginBottom None
+  						attributes [  ]
+  						marginTop None
+  						rawContent ""
+  					}
+  				MoveUp _KJfej3FPEe2Asu6OZgCjMA at 2,2 size 14,7 {
+  				}
+  				
+  				MoveDown _KJfeknFPEe2Asu6OZgCjMA at 2,10 size 14,7 {
+  				}
+  			}
+  		}
+  		
+  		Col _KJfel3FPEe2Asu6OZgCjMA at 240,30 size 220,120 {
+  			wideness Twelfth
+  			layout Layout _KJfepnFPEe2Asu6OZgCjMA {
+  					size Default
+  					offset None
+  					alignment Left
+  				}
+  			generalStyle GeneralStyling _KJfepXFPEe2Asu6OZgCjMA {
+  					tallness Fitting
+  					marginBottom Double
+  					attributes [  ]
+  					marginTop None
+  					rawContent "width: 50px;\nheight: 50px;\nborder: 5px solid #D3D6DA;"
+  				}
+  			MoveLeft _KJfeqHFPEe2Asu6OZgCjMA at 2,2 size 7,14 {
+  			}
+  			
+  			MoveRight _KJfeq3FPEe2Asu6OZgCjMA at 10,2 size 7,14 {
+  			}
+  			
+  			Text _KJfernFPEe2Asu6OZgCjMA at 10,30 size 200,60 {
+  				content [ StaticContent _KJfetHFPEe2Asu6OZgCjMA {
+  						renderMarkdown false
+  						maxChars 0
+  						html false
+  						rawContent "{{current.value}}"
+  						styling TextStyling _KJfetXFPEe2Asu6OZgCjMA {
+  								small false
+  								highlight false
+  								deleted false
+  								underline false
+  								bold false
+  								alignment Left
+  								italic false
+  								color Default
+  							}
+  					} ]
+  				generalStyle GeneralStyling _KJfes3FPEe2Asu6OZgCjMA {
+  						tallness Fitting
+  						marginBottom None
+  						attributes [  ]
+  						marginTop None
+  						rawContent ""
+  					}
+  				MoveUp _KJfet3FPEe2Asu6OZgCjMA at 2,2 size 14,7 {
+  				}
+  				
+  				MoveDown _KJfeunFPEe2Asu6OZgCjMA at 2,10 size 14,7 {
+  				}
+  			}
+  		}
+  		
+  		Col _KJfev3FPEe2Asu6OZgCjMA at 470,30 size 220,120 {
+  			wideness Twelfth
+  			layout Layout _KJfeznFPEe2Asu6OZgCjMA {
+  					size Default
+  					offset None
+  					alignment Left
+  				}
+  			generalStyle GeneralStyling _KJfezXFPEe2Asu6OZgCjMA {
+  					tallness Fitting
+  					marginBottom None
+  					attributes [  ]
+  					marginTop None
+  					rawContent "width: 50px;\nheight: 50px;\nborder: 5px solid #D3D6DA;\nbackground-color: #C9B458;"
+  				}
+  			MoveLeft _KJfe0HFPEe2Asu6OZgCjMA at 2,2 size 7,14 {
+  			}
+  			
+  			MoveRight _KJfe03FPEe2Asu6OZgCjMA at 10,2 size 7,14 {
+  			}
+  			
+  			Text _KJfe1nFPEe2Asu6OZgCjMA at 10,30 size 200,60 {
+  				content [ StaticContent _KJfe3HFPEe2Asu6OZgCjMA {
+  						renderMarkdown false
+  						maxChars 0
+  						html false
+  						rawContent "{{current.value}}"
+  						styling TextStyling _KJfe3XFPEe2Asu6OZgCjMA {
+  								small false
+  								highlight false
+  								deleted false
+  								underline false
+  								bold false
+  								alignment Left
+  								italic false
+  								color Default
+  							}
+  					} ]
+  				generalStyle GeneralStyling _KJfe23FPEe2Asu6OZgCjMA {
+  						tallness Fitting
+  						marginBottom None
+  						attributes [  ]
+  						marginTop None
+  						rawContent ""
+  					}
+  				MoveUp _KJfe33FPEe2Asu6OZgCjMA at 2,2 size 14,7 {
+  				}
+  				
+  				MoveDown _KJfe4nFPEe2Asu6OZgCjMA at 2,10 size 14,7 {
+  				}
+  			}
+  		}
+  	}
+  }
+}
